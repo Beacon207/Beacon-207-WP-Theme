@@ -28,7 +28,7 @@ OVERALL STYLES
 ***********************************/
 
 a, a:visited, a:active {
-    color: #fff;
+    
     text-decoration: none;
 }
 
@@ -47,6 +47,10 @@ header {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+}
+
+header a {
+    color: #fff;
 }
 
 #header-main {
@@ -98,7 +102,7 @@ HEADER: NAV
     border-bottom: 2px solid #fff;
 }
 
-#nav-primary li.current_page_item {
+#nav-primary li.current_page_item a {
     border-bottom: 2px solid #fff;
 }
 
@@ -311,3 +315,249 @@ footer {
 .social img {
     max-width: 100%;
 }
+
+
+/***********************************
+
+MAIN: ALL OTHER PAGES
+
+***********************************/
+
+#inner-page {
+    width: 80%;
+    margin: 100px auto 250px;
+    line-height: 1.5;
+}
+
+#inner-head {
+    margin-bottom: 50px;
+}
+
+#inner-head h1 {
+    font-size: 2.5em;
+}
+
+#inner-tagline {
+    font-weight: bold;
+    width: 75%;
+}
+
+
+
+
+/***********************************
+
+PAGE: OUR MISSION
+
+***********************************/
+
+#main-mission {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+}
+
+.mission-col {
+    width: 45%;
+}
+
+
+
+/***********************************
+
+PAGE: PORTFOLIOS
+
+***********************************/
+
+#main-portfolios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#main-portfolios a {
+    display: inline;
+}
+
+.portfolio-single {
+    width: 25%;
+}
+
+.portfolio-single img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/***********************************
+
+PAGE: SINGLE FEATURE
+
+***********************************/
+
+#artist-name, #artist-description {
+    text-align: center;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+#artist-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.artist-single-image {
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.artist-single-image img {
+    max-width: 100%;
+}
+
+#artist-about {
+    font-size: .8em;
+    width: 50%;
+}
+
+
+
+/***********************************
+
+PAGE: OUR TEAM
+
+***********************************/
+
+#main-team h1, #main-team h2, #main-team p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+
+#main-team img {
+    max-width: 100%;
+    display: block;
+}
+
+.team-social {
+    display: flex;
+}
+
+.team-social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#team-lead {
+    font-size: .8em;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.lead-col1 {
+    width: 30%;
+}
+
+.lead-col2 {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+
+#team-other {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-other-col {
+    width: 25%;
+    text-align: center;
+}
+
+.team-other-title {
+    margin-top: 15px;
+    font-size: .8em;
+}
+
+.team-other-title h2, .team-other-title p {
+    width: 100%;
+}
+
+.team-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/***********************************
+
+PAGE: CONTACT
+
+***********************************/
+
+/****** STYLING THE FORM ***********/
+
+.wpcf7 {
+    width: 45%;
+}
+
+.wpcf7 p {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wpcf7 p label, .wpcf7 p input, .wpcf7 select {
+    width: 100%;
+}
+
+.wpcf7 p label {
+    font-weight: bold;
+    font-size: .8em;
+}
+
+.wpcf7 p input, .wpcf7 select, textarea {
+    border: .5px solid #e2e2e2;
+    background-color: #f4f4f4;
+    height: 30px;
+    margin: 5px 0 15px;
+    outline: none;
+    padding-left: 5px;
+}
+
+textarea {
+    height: 120px;
+    width: 100%;
+}
+
+.wpcf7 .wpcf7-submit {
+    border: none;
+    background-color: #262626;
+    padding: 8px 12px;
+    color: #f4f4f4;
+    border-radius: 2px;
+    width: auto;
+}
+
+/****** STYLING THE ADDRESS ***********/
+
+.contact-foot {
+    margin-top: 100px;
+    font-size: 1.2em;
+}
+
+.contact-phone a {
+    color: #262626;
+}
+
+
