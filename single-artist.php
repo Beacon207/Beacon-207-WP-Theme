@@ -1,6 +1,6 @@
 <?php
 /**
- * This is the template for displaying a single project.
+ * This is the template for displaying a single artist.
  */
  echo get_header();
  ?>
@@ -9,16 +9,17 @@
  <!-- MAIN -->
  <main>
 	<?php
-		if ( have_posts() ) {
-			while ( have_posts() ) {
+		
+        the_post();
+        $post_id = get_the_ID();
+     
+        echo '<h1>' . get_the_title() . '</h1>';
+        the_content();
+     
+        $meta_info = get_fields($post_id);
+        print_r($meta_info);
+        
 
-				the_post();
-
-				echo '<h1>' . get_the_title() . '</h1>';
-				the_content();
-
-			}
-		}
 	?>
  </main>
 

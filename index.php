@@ -18,18 +18,23 @@
 
  <!-- MAIN -->
  <main>
-	<?php
-		if ( have_posts() ) {
-			while ( have_posts() ) {
-
-				the_post();
-
-				echo '<h1>' . get_the_title() . '</h1>';
-				the_content();
-
-			}
-		}
-	?>
+	<?php the_post(); ?>
+     
+    <div id="inner-page">
+        <div id="inner-head">
+            <h1><?php echo $post -> post_title; ?></h1>
+            
+            <!-- If there's an excerpt, output it here -->
+            <?php 
+                $c = $post -> post_content;
+                $m = substr($c, 0, strpos($c, "<!--more-->"));
+                if($m) echo '<p id="inner-tagline">' . $m . '</p>';  
+            ?>
+        </div>
+        
+        <?php the_content(null, true); ?>
+    </div>
+	
  </main>
 
 
