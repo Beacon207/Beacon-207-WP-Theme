@@ -17,3 +17,8 @@
 			'header-links' 	=> "Header Links"
 		)
 	);
+
+
+
+	// ENABLE FEATURED IMAGES
+	add_theme_support( 'post-thumbnails' );
