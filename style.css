@@ -561,3 +561,132 @@ textarea {
 }
 
 
+
+/***********************************
+
+PAGE: SINGLE ARTIST
+
+***********************************/
+
+.single-artist-head, .single-artist-main h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.single-artist-main img {
+    max-width: 100%;
+}
+
+.single-artist-bio, .question-and-answer {
+    text-align: justify;
+}
+
+
+/******** SINGLE ARTIST HEAD ********/
+
+.single-artist-head {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.single-artist-head h1 {
+    font-size: 3em;
+    display: inline-block;
+    padding: .5em 0;
+    border-top: 5px solid #222;
+    border-bottom: 5px solid #222;
+}
+
+.single-artist-head .artist-first-name {
+    font-weight: normal;
+}
+
+.single-artist-head .artist-last-name {
+    letter-spacing: 10px;
+}
+
+.single-artist-head p {
+    margin: 2px 0;
+}
+
+
+/*********** FLEX BOTH CONTENT ROWS ***********/
+
+.single-artist-about, .artist-more {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* LEFT COL */
+.single-artist-headshot, .contact-and-links {
+    width: 25%;
+}
+
+
+/* RIGHT COL */
+.single-artist-bio, .artist-main-interview {
+    width: 70%;
+}
+
+
+/*********** ARTIST ABOUT ***********/
+
+.single-artist-about {
+    margin-bottom: 50px;
+}
+
+.single-artist-bio h3, .artist-main-interview h3 {
+    font-size: 1.5em;
+}
+
+
+/*********** ARTIST SIDEBAR ***********/
+
+.artist-sidebar {
+    font-size: .9em;
+}
+
+.artist-sidebar h3 {
+    margin-bottom: .5em;
+}
+
+.artist-sidebar a {
+    color: #8c8c8c;
+    font-weight: bold;
+}
+
+.artist-sidebar a:hover {
+    color: #ccc;
+}
+
+.artist-social-icons img {
+    width: 20px;
+    margin-top: 5px;
+}
+
+.artist-project-links {
+    margin-right: 4.5em;
+}
+
+.artist-project-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.artist-contact {
+    margin-top: 2em;
+}
+
+/*********** ARTIST INTERVIEW ***********/
+
+.question-and-answer {
+    margin-top: 30px;
+}
+
+.artist-question p {
+    font-weight: bold;
+}
