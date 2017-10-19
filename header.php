@@ -14,6 +14,9 @@
 		<!-- PAGE META TITLE / DESCRIPTION -->
 		<title><?php echo get_bloginfo('name'); ?> | <?php echo get_the_title(); ?></title>
 		<meta name="description" content="Welcome to Beacon Media..." />
+
+		<?php wp_head(); ?>
+
 	</head>
 	<body>
 
