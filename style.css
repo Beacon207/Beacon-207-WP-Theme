@@ -303,6 +303,7 @@ footer {
 
 #social-icons {
     display: flex;
+    justify-content: space-between;
     width: 200px;
     margin: 0 auto;
 }
@@ -690,3 +691,174 @@ PAGE: SINGLE ARTIST
 .artist-question p {
     font-weight: bold;
 }
+
+
+
+
+/***********************************
+
+PAGE: SINGLE PROJECT
+
+***********************************/
+
+/*********** PROJECT HEADER + DESCRIPTION ***********/
+
+.single-project-head {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.single-project-head h1, .single-project-head h2 {
+    margin: 0;
+}
+
+.single-project-head h1 {
+    font-size: 2.5em;
+}
+
+.single-project-head h2 {
+    font-size: 1.2em;
+}
+
+.single-project-description {
+    text-align: justify;
+}
+
+/*********** PROJECT VISUALS: PHOTOS ***********/
+
+.single-project-section {
+    margin: 75px 0 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-project-section img {
+    max-width: 100%;
+    display: block;
+}
+
+.project-with-thumbnails {
+    width: 20%;
+}
+
+.project-with-thumbnails p {
+    color: #444;
+    text-transform: uppercase;
+    margin: 0 0 2.5em;
+    padding-bottom: .4em;
+    border-bottom: 3px solid #444;
+}
+
+.thumbnails-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.one-thumbnail {
+    width: 30%;
+    margin-bottom: .5em;
+}
+
+.single-project-image-lg {
+    width: 75%;
+    text-align: center;
+}
+
+/*********** PROJECT VISUALS: VIDEO ***********/
+
+.project-with-video {
+    margin: 0 auto 100px;
+}
+
+.project-with-video iframe {
+    display: block;
+}
+
+
+/*********** PROJECT COMMENTS ***********/
+
+.project-comments {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    height: 600px;
+}
+
+/*********** BROWSING OPTIONS ***********/
+
+.project-browse-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/***********************************
+
+PAGE: ALL ARTISTS
+
+***********************************/
+
+.all-artists-head {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.all-artists-main {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.all-artists-main img {
+    max-width: 100%;
+}
+
+.one-artist {
+    width: 20%;
+    margin: 0 2.5% 40px;
+}
+
+.one-artist p {
+    margin: 0;
+}
+
+.one-artist-last {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+
+
+/***********************************
+
+BACK BUTTON
+
+***********************************/
+
+.back-button a {
+    margin-top: 100px;
+    display: inline-block;
+    border: 3px solid #000;
+    padding: 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+}
+
+.back-button a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
