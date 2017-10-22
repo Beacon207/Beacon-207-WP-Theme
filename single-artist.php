@@ -2,7 +2,10 @@
 /**
  * This is the template for displaying a single artist.
  */
- echo get_header();
+ 
+    echo get_header();
+
+    $artist = get_artist($post);
  ?>
 
 
@@ -11,22 +14,23 @@
 	<div id="inner-page" class="single-artist-main">
            
             <div class="single-artist-head">
-                <h1><span class="artist-first-name">Dave</span> <span class="artist-last-name">Richards</span></h1>
+                <h1><span class="artist-first-name"><?php echo $artist -> additional_fields['first_name']; ?></span> 
+                    <span class="artist-last-name"><?php echo $artist -> additional_fields['last_name']; ?></span></h1>
                 <div class="artist-medium">
-                   <p>Photographer</p>
+                   <p><?php echo $artist -> additional_fields['preferred_medium']; ?></p>
                 </div>
                 <div class="artist-location">
-                    <p><span class="artist-city">Portland</span>, <span class="artist-state">Maine</span></p>
+                    <p><span class="artist-city"><?php echo $artist -> additional_fields['location']; ?></span></p>
                 </div>
             </div>
             
             <div class="single-artist-about">
                 <div class="single-artist-headshot">
-                    <img src="img/img_placeholder.jpg" alt="artist headshot">
+                    <?php echo $artist -> thumbnail; ?>
                 </div>
                 <div class="single-artist-bio">
                    <h3>Biography</h3>
-                    <div class="artist-bio"><p>Fusce quis pharetra risus, a faucibus ligula. Aenean condimentum, arcu et aliquam vestibulum, mauris velit feugiat leo, vel tempor mauris metus eget dui. Quisque eget posuere sem, ac congue sem. Vivamus porta, nisi pellentesque cursus vehicula, mauris enim auctor augue, tempor ultricies libero orci vitae eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed porttitor ante sed nisi aliquet, nec tempor nibh aliquam. Vivamus porta, nisi pellentesque cursus vehicula, mauris enim auctor augue, tempor ultricies libero orci vitae eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed porttitor ante sed nisi aliquet, nec tempor nibh aliquam. Mauris porttitor, lorem vitae eleifend tempor, purus est facilisis orci, id aliquam quam felis at neque.</p></div>
+                    <div class="artist-bio"><?php  echo $artist -> content_filtered; ?></div>
                 </div>
             </div>
 
