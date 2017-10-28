@@ -370,24 +370,71 @@ PAGE: PORTFOLIOS
 
 ***********************************/
 
-#main-portfolios {
+#main-projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin: 50px 0;
 }
 
-#main-portfolios a {
-    display: inline;
-}
-
-.portfolio-single {
+.single-project-container {
+    position: relative;
     width: 25%;
 }
 
-.portfolio-single img {
-    max-width: 100%;
+.image {
     display: block;
+    width: 100%;
+    height: auto;
 }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.single-project-container:hover .overlay {
+    height: 100%;
+}
+
+.overlay-text {
+    text-align: center;
+    white-space: nowrap; 
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.overlay-text-artist {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+}
+
+.overlay-text-project {
+    font-style: italic;
+}
+
+
+
 
 
 
@@ -601,10 +648,6 @@ PAGE: SINGLE ARTIST
 
 .single-artist-head .artist-first-name {
     font-weight: normal;
-}
-
-.single-artist-head .artist-last-name {
-    letter-spacing: 10px;
 }
 
 .single-artist-head p {
@@ -836,6 +879,14 @@ PAGE: ALL ARTISTS
     font-weight: bold;
     font-size: 1.1em;
 }
+
+
+
+/***********************************
+
+PAGE: ALL PROJECTS
+
+***********************************/
 
 
 
