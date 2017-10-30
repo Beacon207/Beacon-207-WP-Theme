@@ -1,4 +1,18 @@
-<?php echo get_header(); ?>
+<?php 
+
+    /**
+     * This is the template for displaying a list of projects.
+     */
+ 
+    // LOAD DATA FOR THE LIST OF PROJECTS
+    $projects = get_project_list();
+    print_r($projects);
+
+
+    // RENDER THEME HEADER
+    echo get_header(); 
+
+?>
 
 
     <!-- MAIN -->

@@ -1,11 +1,16 @@
 <?php
-/**
- * This is the template for displaying a single artist.
- */
+    /**
+     * This is the template for displaying a single artist.
+     */
  
+    // LOAD DATA FOR SELECTED ARTIST
+    $artist = get_artist($post);
+    print_r($artist);
+
+
+    // RENDER THEME HEADER
     echo get_header();
 
-    $artist = get_artist($post);
  ?>
 
 

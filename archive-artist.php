@@ -1,4 +1,18 @@
-<?php echo get_header(); ?>
+<?php 
+    
+    /**
+     * This is the template for displaying a list of artists.
+     */
+ 
+    // LOAD DATA FOR THE LIST OF ARTISTS
+    $artists = get_artist_list();
+    print_r($artists);
+
+
+    // RENDER THEME HEADER
+    echo get_header(); 
+    
+?>
 
 
  <!-- MAIN -->
