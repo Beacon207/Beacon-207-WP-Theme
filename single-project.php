@@ -4,12 +4,47 @@
      */
 
     // LOAD DATA FOR SELECTED PROJECT
+    // ---
+    // get_project() here is an example of a "model" function because it works directly with the "data model."
+    // If we do this kind of thing correctly, as long as get_project() continues to return the same kind of data,
+    // we can change what's happening under the hood of that function (how the data is stored etc.) without needing to change the template at all. 
     $project = get_project($post);
-    print_r($project);
+    $artist = $project -> artist;
 
+
+    // if you want to print_r a PHP variable, throw it between comments to avoid throwing off your actual UI...
+    echo '<!--';
+    print_r($project);
+    print_r($artist);
+    echo '-->';
+
+
+    // you can also output in javascript and use your developer tools to look at it...
+    echo '  <script>
+                console.log("project:");
+                console.log(' . json_encode($project) . ');
+                console.log("artist:");
+                console.log(' . json_encode($artist) . ')
+            </script>';
+
+
+    ///////////////////////////////////////////////////
 
     // RENDER THEME HEADER
     echo get_header();
+
+    ///////////////////////////////////////////////////
+
+
+    // here's an example HTML block that shows you how to fetch some different information from the data object returned 
+    echo '  <div style="padding: 50px; border: solid 1px #ccc; margin: 50px;">
+                <b>Artist Name:</b><br />' . $artist -> post_title . 
+                '<br /><br /><b>Arist First Name:</b><br />' . $artist -> additional_fields['first_name'] . 
+                '<br /><br /><b>Projects:</b><br />';
+                foreach($artist -> projects as $project){
+                    echo $project -> post_title . '<br />';
+                }
+    echo    '</div>';
 
  ?>
 

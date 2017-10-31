@@ -39,7 +39,7 @@
 			$sql = 'SELECT post_id FROM wp_postmeta where meta_key="artist" and meta_value="' . $post -> ID . '"';
 			$projectIds = $wpdb->get_col($sql);
 			foreach ($projectIds as $id) {
-				$post -> projects[] = get_project(get_post($id));
+				$post -> projects[] = get_project(get_post($id), false);
 			}
 		}
 
@@ -65,10 +65,15 @@
 
 
 	// GET PROJECT
-	function get_project($post){
-		$post -> additional_fields = get_fields($post -> ID);
+	function get_project($post, $getFull = true){
 		$post -> thumbnail = get_the_post_thumbnail($post -> ID, array(200));
 		$post -> content_filtered = apply_filters('the_content', $post -> post_content);
+		if($getFull){
+			$post -> additional_fields = get_fields($post -> ID);
+			$post -> artist = get_artist($post -> additional_fields['artist']);
+			unset($post -> additional_fields['artist']);
+		}
+
 
 		return $post;
 	}
