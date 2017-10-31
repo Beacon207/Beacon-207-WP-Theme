@@ -20,14 +20,21 @@
     <div id="inner-page" class="single-project-main">
         <div class="single-project-head">
             <div class="single-project-artist">
-                <h2><span class="single-project-artist-first">Dean</span> <span class="single-project-artist-last">Thomas</span></h2>
+               
+                <!-- Literally just guessed here -->
+
+                <h2><span class="single-project-artist-first"><?php echo $project -> additional_fields['artist'] -> additional_fields['first_name']; ?></span>
+                
+                <!-- end-->
+                
+                  <span class="single-project-artist-last">Thomas</span></h2>
             </div>
             <div class="single-project-title">
-                <h1>Butterbeer: Wizards Love It</h1>
+                <h1><?php echo $project -> post_title; ?></h1>
             </div>
         </div>
         <div class="single-project-description">
-            <p>Aliquam neque nisi, porttitor et orci cursus, varius scelerisque purus. Pellentesque nunc dui, ultricies ut suscipit vitae, feugiat sed felis. Mauris odio ipsum, interdum id mauris at, fermentum euismod ex. Suspendisse rhoncus vel orci id dignissim. Nunc dapibus eu nunc nec sodales. Duis sollicitudin libero id ante suscipit, sed tempor elit sagittis. Nulla pharetra nisi ac nisl convallis facilisis. Maecenas ipsum sapien, vestibulum at libero quis, ornare vestibulum ante. Duis vel eleifend nisi, vitae convallis tortor. Sed efficitur turpis ac molestie sodales. Donec faucibus elementum justo.</p>
+            <p><?php echo $project -> post_content; ?></p>
         </div>
         <div class="single-project-section">
            <!-- TWO COLUMNS IF IMAGES (is this possible?) -->
@@ -66,13 +73,13 @@
         
         <div class="project-browse-options">
             <div class="back-button">
-                <a href="all-projects.html">&larr; Back to all projects</a>
+                <a href="http://beacon207.com/project/">&larr; Back to all projects</a>
             </div>
             <div class="back-button">
                 <a href="single-artist.html">View Artist Page</a>
             </div>
             <div class="back-button">
-                <a href="all-artists.html">Back to all artists &rarr;</a>
+                <a href="http://beacon207.com/artist/">Back to all artists &rarr;</a>
             </div>
         </div>
     <!-- End inner page -->
