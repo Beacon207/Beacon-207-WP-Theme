@@ -55,14 +55,9 @@
     <div id="inner-page" class="single-project-main">
         <div class="single-project-head">
             <div class="single-project-artist">
-               
-                <!-- Literally just guessed here -->
-
-                <h2><span class="single-project-artist-first"><?php echo $project -> additional_fields['artist'] -> additional_fields['first_name']; ?></span>
+                <h2><span class="single-project-artist-first"><?php echo $artist -> additional_fields['first_name']; ?></span>
                 
-                <!-- end-->
-                
-                  <span class="single-project-artist-last">Thomas</span></h2>
+                  <span class="single-project-artist-last"><?php echo $artist -> additional_fields['last_name']; ?>s</span></h2>
             </div>
             <div class="single-project-title">
                 <h1><?php echo $project -> post_title; ?></h1>
