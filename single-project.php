@@ -57,7 +57,7 @@
             <div class="single-project-artist">
                 <h2><span class="single-project-artist-first"><?php echo $artist -> additional_fields['first_name']; ?></span>
                 
-                  <span class="single-project-artist-last"><?php echo $artist -> additional_fields['last_name']; ?>s</span></h2>
+                  <span class="single-project-artist-last"><?php echo $artist -> additional_fields['last_name']; ?></span></h2>
             </div>
             <div class="single-project-title">
                 <h1><?php echo $project -> post_title; ?></h1>

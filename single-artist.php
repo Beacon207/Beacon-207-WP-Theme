@@ -61,23 +61,14 @@
                 <div class="artist-main-interview">
                     <h3>Q&amp;A</h3>
                     <div class="question-and-answer">
-                        <div class="artist-question"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p></div>
-                        <div class="artist-answer"><p>Sed vel est in nulla pretium posuere non sit amet augue. In hac habitasse platea dictumst. Proin felis nulla, dapibus ut lorem vel, placerat ultrices lorem. Integer mattis augue facilisis erat tincidunt, convallis tristique tellus commodo. Aliquam erat volutpat.</p></div>
-                    </div>
-                    <div class="question-and-answer">
-                        <div class="artist-question"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p></div>
-                        <div class="artist-answer"><p>Quisque eget posuere sem, ac congue sem. Vivamus porta, nisi pellentesque cursus vehicula, mauris enim auctor augue, tempor ultricies libero orci vitae eros. Sed vel est in nulla pretium posuere non sit amet augue. In hac habitasse platea dictumst. Proin felis nulla, dapibus ut lorem vel, placerat ultrices lorem. Integer mattis augue facilisis erat tincidunt, convallis tristique tellus commodo. Aliquam erat volutpat.</p></div>
-                    </div>
-                    <div class="question-and-answer">
-                        <div class="artist-question"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p></div>
-                        <div class="artist-answer"><p>Sed vel est in nulla pretium posuere non sit amet augue. In hac habitasse platea dictumst. Proin felis nulla, dapibus ut lorem vel, placerat ultrices lorem. Integer mattis augue facilisis erat tincidunt, convallis tristique tellus commodo. Aliquam erat volutpat.</p></div>
+                        <?php echo $artist -> additional_fields['interview']; ?>
                     </div>
                 </div>
             </div>
 
             
             <div class="back-button">
-                <a href="all-artists.html">&larr; Back to all artists</a>
+                <a href="#">&larr; Back to all artists</a>
             </div>
 
         <!-- End inner page -->
