@@ -853,6 +853,10 @@ PAGE: ALL ARTISTS
     margin: 0 auto;
 }
 
+.all-artists-head p {
+    letter-spacing: 1px;
+}
+
 .all-artists-main {
     margin-top: 100px;
     display: flex;
