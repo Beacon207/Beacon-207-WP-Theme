@@ -24,44 +24,32 @@
         <div class="all-artists-head">
             <h1>Browse Artists</h1>
             <p>&#40;sorted alphabetically by last name&#41;</p>
-        </div>
-        
-        <div class="all-artists-main">
-            <div class="one-artist">
-                <img src="img/img_placeholder2.jpeg" alt="artist headshot">
-                <p class="one-artist-first">Luna</p>
-                <p class="one-artist-last">Lovegood</p>
-            </div>
+        </div>      
+                                
+        <div class="all-artists-main"> 
+          
+        <!-- Using a for loop to print out the correct number of artists with headshots to the page -->
+        <!-- UNSURE OF HOW TO SORT BY ALPHA? -->         
+           <?php 
+            for ($i = 0; $i < count($artists); $i++) {
+            ?>
+               <div class="one-artist">
+                    <img src="<?php echo $artists[$i] -> additional_fields['additional_picture']['url']; ?>">    
+                    <p class="one-artist-first"><?php echo $artists[$i] -> additional_fields['first_name']; ?></p>
+                    <p class="one-artist-last"><?php echo $artists[$i] -> additional_fields['last_name']; ?></p> 
+                </div>
+            <?php
+            }
+            ?>
+           
+            <!-- ORIGINAL CODE BLOCK BEFORE PHP
             <div class="one-artist">
                 <img src="img/img_placeholder.jpg" alt="artist headshot">
                 <p class="one-artist-first">Remus</p>
                 <p class="one-artist-last">Lupin</p>
             </div>
-            <div class="one-artist">
-                <img src="img/img_placeholder2.jpeg" alt="artist headshot">
-                <p class="one-artist-first">Dean</p>
-                <p class="one-artist-last">Thomas</p>
-            </div>
-            <div class="one-artist">
-                <img src="img/img_placeholder.jpg" alt="artist headshot">
-                <p class="one-artist-first">Bathilda</p>
-                <p class="one-artist-last">Bagshot</p>
-            </div>
-            <div class="one-artist">
-                <img src="img/img_placeholder.jpg" alt="artist headshot">
-                <p class="one-artist-first">Lucius</p>
-                <p class="one-artist-last">Malfoy</p>
-            </div>
-            <div class="one-artist">
-                <img src="img/img_placeholder2.jpeg" alt="artist headshot">
-                <p class="one-artist-first">Susan</p>
-                <p class="one-artist-last">Bones</p>
-            </div>
-            <div class="one-artist">
-                <img src="img/img_placeholder.jpg" alt="artist headshot">
-                <p class="one-artist-first">Dudley</p>
-                <p class="one-artist-last">Dursley</p>
-            </div>
+            -->
+            
         </div>
         
         <div class="back-button">
