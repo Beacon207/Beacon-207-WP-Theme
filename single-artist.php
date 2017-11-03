@@ -31,7 +31,7 @@
             
             <div class="single-artist-about">
                 <div class="single-artist-headshot">
-                    <?php echo $artist -> thumbnail; ?>
+                    <img src="<?php echo $artist -> additional_fields['additional_picture']['url']; ?>">
                 </div>
                 <div class="single-artist-bio">
                    <h3>Biography</h3>
@@ -51,7 +51,7 @@
                     <div class="artist-contact">
                         <h3>Connect</h3>
                         <div class="artist-website">
-                            <a href="#" target="_blank">www.daveswebsite.com</a>
+                            <a href="#" target="_blank"><?php echo $artist -> additional_fields['website']; ?></a>
                         </div>
                         <div class="artist-social-icons">
                             <a href="#" target="_blank"><img src="img/001-twitter-sign.png"></a>
