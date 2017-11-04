@@ -6,8 +6,17 @@
  
     // LOAD DATA FOR THE LIST OF ARTISTS
     $artists = get_artist_list();
-    print_r($artists);
 
+
+    // THE SORT CAN (AND PROBABLY SHOULD) HAPPEN IN THE MODEL, BUT HERE'S WHAT IT LOOKS LIKE
+    usort($artists, function($a, $b){
+        return $a -> additional_fields['first_name'] > $b -> additional_fields['first_name'];
+    });
+
+
+    echo '<!--';
+    print_r($artists);
+    echo '-->';
 
     // RENDER THEME HEADER
     echo get_header(); 
@@ -28,27 +37,20 @@
                                 
         <div class="all-artists-main"> 
           
-        <!-- Using a for loop to print out the correct number of artists with headshots to the page -->
-        <!-- UNSURE OF HOW TO SORT BY ALPHA? -->         
-           <?php 
-            for ($i = 0; $i < count($artists); $i++) {
-            ?>
-               <div class="one-artist">
-                    <img src="<?php echo $artists[$i] -> additional_fields['additional_picture']['url']; ?>">    
-                    <p class="one-artist-first"><?php echo $artists[$i] -> additional_fields['first_name']; ?></p>
-                    <p class="one-artist-last"><?php echo $artists[$i] -> additional_fields['last_name']; ?></p> 
-                </div>
-            <?php
-            }
+            <?php 
+
+                foreach($artists as $artist){
+                    extract($artist-> additional_fields);
+                    
+                    echo  ' <div class="one-artist">
+                                <img src="' . $additional_picture['url'] . '">    
+                                <p class="one-artist-first">' . $first_name . '</p>
+                                <p class="one-artist-last">' . $last_name . '</p> 
+                            </div>';
+                }
+                   
             ?>
            
-            <!-- ORIGINAL CODE BLOCK BEFORE PHP
-            <div class="one-artist">
-                <img src="img/img_placeholder.jpg" alt="artist headshot">
-                <p class="one-artist-first">Remus</p>
-                <p class="one-artist-last">Lupin</p>
-            </div>
-            -->
             
         </div>
         

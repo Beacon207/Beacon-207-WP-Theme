@@ -56,8 +56,9 @@
 			$artists[] = get_artist($post, false);
 		}
 
+		// sort
 		usort($artists, function($a, $b){
-			return $a -> additional_fields['last_name'] < $b -> additional_fields['last_name'];
+			return $a -> additional_fields['last_name'] > $b -> additional_fields['last_name'];
 		});
 
 		return $artists;
