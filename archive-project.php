@@ -39,7 +39,7 @@
                     $xpath = new DOMXPath($doc);
                     $src = $xpath->evaluate("string(//img/@src)");
                     
-                    echo ' <a href="#" class="single-project-container">            <div>
+                    echo ' <a href="' . $project -> guid . '" class="single-project-container">            <div>
                                 <img img src="' . $src . '" alt="Project image" class="image">
                                     <div class="overlay">
                                         <div class="overlay-text">
