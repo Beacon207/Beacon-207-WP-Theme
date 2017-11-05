@@ -43,7 +43,9 @@
                     extract($artist-> additional_fields);
                     
                     echo  ' <div class="one-artist">
-                                <img src="' . $additional_picture['url'] . '">    
+                                <a href="' . $artist -> permalink . '">
+                                <img src="' . $additional_picture['url'] . '">
+                                </a>
                                 <p class="one-artist-first">' . $first_name . '</p>
                                 <p class="one-artist-last">' . $last_name . '</p> 
                             </div>';
