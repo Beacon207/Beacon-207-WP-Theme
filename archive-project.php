@@ -6,7 +6,9 @@
  
     // LOAD DATA FOR THE LIST OF PROJECTS
     $projects = get_project_list();
+    echo "<!--";
     print_r($projects);
+    echo "-->";
 
 
     // RENDER THEME HEADER
@@ -23,9 +25,35 @@
             <div id="inner-head">
                 <h1>Artist Collections</h1>
             </div>
+                
             
             <div id="main-projects">
-                <a href="#" class="single-project-container"><div>
+              
+            <?php
+                
+                foreach($projects as $project) {
+
+                    $html = $project -> thumbnail;
+                    $doc = new DOMDocument();
+                    $doc->loadHTML($html);
+                    $xpath = new DOMXPath($doc);
+                    $src = $xpath->evaluate("string(//img/@src)");
+                    
+                    echo ' <a href="#" class="single-project-container">            <div>
+                                <img img src="' . $src . '" alt="Project image" class="image">
+                                    <div class="overlay">
+                                        <div class="overlay-text">
+                                            <div class="overlay-text-artist">' . $project -> artist . '</div>
+                                            <div class="overlay-text-project">' . $project -> post_title . '</div>
+                                        </div>
+                                    </div>
+                                </div></a> ';
+                    
+                }
+                
+            ?>
+               
+                <!--<a href="#" class="single-project-container"><div>
                     <img img src="img/img_placeholder.jpg" alt="Project image" class="image">
                     <div class="overlay">
                         <div class="overlay-text">
@@ -33,71 +61,11 @@
                             <div class="overlay-text-project">Name of Collection</div>
                         </div>
                     </div>
-                </div></a>
-                <a href="#" class="single-project-container"><div>
-                    <img img src="../Assets/sample_home_gallery3.png" class="image">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <div class="overlay-text-artist">John Doe</div>
-                            <div class="overlay-text-project">Name of Collection</div>
-                        </div>
-                    </div>
-                </div></a>
-                <a href="#" class="single-project-container"><div>
-                    <img img src="../Assets/sample_home_gallery2.png" alt="Project image" class="image">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <div class="overlay-text-artist">John Doe</div>
-                            <div class="overlay-text-project">Name of Collection</div>
-                        </div>
-                    </div>
-                </div></a>
-                <a href="#" class="single-project-container"><div>
-                    <img img src="../Assets/sample_home_gallery1.JPG" alt="Project image" class="image">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <div class="overlay-text-artist">John Doe</div>
-                            <div class="overlay-text-project">Name of Collection</div>
-                        </div>
-                    </div>
-                </div></a>
+                </div></a>-->
                 
-               <a href="#" class="single-project-container"><div>
-                    <img img src="../Assets/sample_project_gallery4.jpeg" alt="Project image" class="image">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <div class="overlay-text-artist">John Doe</div>
-                            <div class="overlay-text-project">Name of Collection</div>
-                        </div>
-                    </div>
-                </div></a>
-                <a href="#" class="single-project-container"><div>
-                    <img img src="../Assets/sample_project_gallery1.jpeg" alt="Project image" class="image">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <div class="overlay-text-artist">John Doe</div>
-                            <div class="overlay-text-project">Name of Collection</div>
-                        </div>
-                    </div>
-                </div></a>
-                <a href="#" class="single-project-container"><div>
-                    <img img src="../Assets/sample_project_gallery2.jpeg" alt="Project image" class="image">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <div class="overlay-text-artist">John Doe</div>
-                            <div class="overlay-text-project">Name of Collection</div>
-                        </div>
-                    </div>
-                </div></a>
-                <a href="#" class="single-project-container"><div>
-                    <img img src="../Assets/sample_project_gallery3.jpeg" alt="Project image" class="image">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <div class="overlay-text-artist">John Doe</div>
-                            <div class="overlay-text-project">Name of Collection</div>
-                        </div>
-                    </div>
-                </div></a>
+                
+                
+                
             </div>
         </div>
 
