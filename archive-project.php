@@ -62,11 +62,13 @@
                         </div>
                     </div>
                 </div></a>-->
-                
-                
-                
-                
             </div>
+           
+            <div class="back-button">
+                <a href="http://localhost/beaconmedia/artist/">&larr; View All Artists</a>
+            </div>
+              
+        <!-- End inner page -->
         </div>
 
     </main>

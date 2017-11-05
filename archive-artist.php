@@ -57,7 +57,7 @@
         </div>
         
         <div class="back-button">
-            <a href="all-projects.html">&larr; View All Projects</a>
+            <a href="http://localhost/beaconmedia/project/">&larr; View All Collections</a>
         </div>
 
         <!-- End inner page -->

@@ -103,13 +103,13 @@
         
         <div class="project-browse-options">
             <div class="back-button">
-                <a href="http://beacon207.com/project/">&larr; Back to all projects</a>
+                <a href="http://localhost/beaconmedia/project/">&larr; Back to all projects</a>
             </div>
             <div class="back-button">
-                <a href="single-artist.html">View Artist Page</a>
+                <a href="<?php echo $artist -> permalink; ?>">View Artist Bio</a>
             </div>
             <div class="back-button">
-                <a href="http://beacon207.com/artist/">Back to all artists &rarr;</a>
+                <a href="http://localhost/beaconmedia/artist/">Back to all artists &rarr;</a>
             </div>
         </div>
     <!-- End inner page -->

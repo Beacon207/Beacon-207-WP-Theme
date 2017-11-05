@@ -5,7 +5,9 @@
  
     // LOAD DATA FOR SELECTED ARTIST
     $artist = get_artist($post);
+    echo "<!--";
     print_r($artist);
+    echo "-->";
 
 
     // RENDER THEME HEADER
@@ -77,7 +79,7 @@
 
             
             <div class="back-button">
-                <a href="#">&larr; Back to all artists</a>
+                <a href="http://localhost/beaconmedia/artist/">&larr; Back to all artists</a>
             </div>
 
         <!-- End inner page -->
