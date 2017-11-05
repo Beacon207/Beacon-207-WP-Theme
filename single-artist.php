@@ -44,8 +44,17 @@
                     <div class="artist-project-links">
                         <h3>Browse Featured</h3>
                         <ul class="browse-artist-projects">
-                            <li><a href="#">Name of Project Here</a></li>
-                            <li><a href="#">Name of Project Here</a></li>
+                           
+                        <?php
+                            
+                            foreach($artist -> projects as $project) {
+                                echo '<li>
+                                    <a href="' . $project -> guid . '">' . $project -> post_title . '</a>
+                                    </li>';
+                            }
+                            
+                        ?>
+                              
                         </ul>
                     </div>
                     <div class="artist-contact">
