@@ -2,7 +2,8 @@
 
     /**
      * This is the template for displaying a list of projects.
-     */
+     **/
+
  
     // LOAD DATA FOR THE LIST OF PROJECTS
     $projects = get_project_list();
