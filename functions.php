@@ -36,7 +36,7 @@
 		// this gets ALL the project data for each artist, could be stripped down if need be
 		if($getPosts){
 			$post -> projects = array();
-			$sql = 'SELECT post_id FROM wp_postmeta where meta_key="artist" and meta_value="' . $post -> ID . '"';
+			$sql = 'SELECT post_id FROM ' . $wpdb -> postmeta . ' where meta_key="artist" and meta_value="' . $post -> ID . '"';
 			$projectIds = $wpdb->get_col($sql);
 			foreach ($projectIds as $id) {
 				$post -> projects[] = get_project(get_post($id), false);
@@ -50,7 +50,7 @@
 	function get_artist_list(){
 		global $wpdb;
 		$artists = array();
-		$sql = 'SELECT * FROM wp_posts where post_type="artist" and post_status="publish"';
+		$sql = 'SELECT * FROM ' . $wpdb -> posts . ' where post_type="artist" and post_status="publish"';
 		$posts = $wpdb->get_results($sql);
 		foreach ($posts as $post) {
 			$artists[] = get_artist($post, false);
@@ -86,7 +86,7 @@
 	function get_project_list(){
 		global $wpdb;
 		$projects = array();
-		$sql = 'SELECT * FROM wp_posts where post_type="project" and post_status="publish" ORDER BY menu_order';
+		$sql = 'SELECT * FROM  ' . $wpdb -> posts . '  where post_type="project" and post_status="publish" ORDER BY menu_order';
 		$posts = $wpdb->get_results($sql);
 		foreach ($posts as $post) {
 			$projects[] = get_project($post, false);
