@@ -1,12 +1,12 @@
     <!-- SUPPORTERS SECTION -->
-    <div id="supporters">
+    <!-- <div id="supporters">
         <h3>Our Supporters</h3>
         <div id="supporter-list">
             <div class="supporter-icon"><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/example/sponsor_logo1.jpeg" alt="A Logo Goes Here"></a></div>
             <div class="supporter-icon"><a href="https://www.smccme.edu" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/example/smcc_logo_bw.jpeg" alt="Southern Maine Community College Logo"></a></div>
             <div class="supporter-icon"><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/example/sponsor_logo2.png" alt="A Logo Goes Here"></a></div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- FOOTER -->
