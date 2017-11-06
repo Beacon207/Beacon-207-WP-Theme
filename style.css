@@ -14,6 +14,12 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/***********************************
+
+OVERALL STYLES
+
+***********************************/
+
 body {
     width: 100%;
     font-size: 100%;
@@ -21,16 +27,9 @@ body {
     box-sizing: border-box;
 }
 
-/***********************************
-
-OVERALL STYLES
-
-***********************************/
-
 a, a:visited, a:active {
     text-decoration: none;
 }
-
 
 
 
@@ -312,15 +311,17 @@ footer {
 
 /***********************************
 
-MAIN: ALL OTHER PAGES
+MAIN SECTION: ALL OTHER PAGES
 
 ***********************************/
 
 #inner-page {
-    width: 80%;
+    width: 85%;
     margin: 100px auto 250px;
     line-height: 1.5;
 }
+
+/**** FOR STATIC PAGE SUB HEADER *****/
 
 #inner-head {
     margin-bottom: 50px;
@@ -334,7 +335,6 @@ MAIN: ALL OTHER PAGES
     font-weight: bold;
     width: 75%;
 }
-
 
 
 
@@ -423,43 +423,6 @@ PAGE: PORTFOLIOS
 
 .overlay-text-project {
     font-style: italic;
-}
-
-
-
-
-
-
-/***********************************
-
-PAGE: SINGLE FEATURE
-
-***********************************/
-
-#artist-name, #artist-description {
-    text-align: center;
-    font-size: 1.4em;
-    text-transform: uppercase;
-}
-
-#artist-thumbnails {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.artist-single-image {
-    width: 30%;
-    margin-bottom: 40px;
-}
-
-.artist-single-image img {
-    max-width: 100%;
-}
-
-#artist-about {
-    font-size: .8em;
-    width: 50%;
 }
 
 
@@ -602,7 +565,6 @@ textarea {
 
 
 
-
 /***********************************
 
 PAGE: SINGLE ARTIST
@@ -726,96 +688,65 @@ PAGE: SINGLE PROJECT
 
 ***********************************/
 
-/*********** PROJECT HEADER + DESCRIPTION ***********/
 
 .single-project-head {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.single-project-head h1, .single-project-head h2 {
+.single-project-head h2, .single-project-head h3 {
     margin: 0;
 }
 
-.single-project-head h1 {
-    font-size: 2.5em;
-}
-
 .single-project-head h2 {
-    font-size: 1.2em;
+    font-size: 2.25em;
 }
 
 .single-project-description {
     text-align: justify;
+    font-size: .8em;
 }
 
-/*********** PROJECT VISUALS: PHOTOS ***********/
-
-.single-project-section {
-    margin: 75px 0 150px;
-    display: flex;
-    justify-content: space-between;
+.project-sidebar h4 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: .8em;
+    color: #6b6b6b;
 }
 
-.single-project-section img {
+.project-sidebar {
+    width: 30%;
+    float: left;
+}
+
+.project-content-container {
+    width: 60%;
+    float: right;
+}
+
+/***** FOR PHOTOGRAPHS *****/
+
+.one-thumbnail {
+    width: 33.333333%;
+    float: left;
+}
+
+.one-thumbnail img {
     max-width: 100%;
     display: block;
 }
 
-.project-with-thumbnails {
-    width: 20%;
-}
-
-.project-with-thumbnails p {
-    color: #444;
-    text-transform: uppercase;
-    margin: 0 0 2.5em;
-    padding-bottom: .4em;
-    border-bottom: 3px solid #444;
-}
-
-.thumbnails-display {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: flex-start;
-}
-
-.one-thumbnail {
-    width: 30%;
-    margin-bottom: .5em;
-}
-
-.single-project-image-lg {
-    width: 75%;
-    text-align: center;
-}
-
-/*********** PROJECT VISUALS: VIDEO ***********/
-
-.project-with-video {
-    margin: 0 auto 100px;
-}
-
-.project-with-video iframe {
-    display: block;
-}
+/***** FOR VIDEO *****/
 
 
-/*********** PROJECT COMMENTS ***********/
 
-.project-comments {
-    width: 60%;
-    margin: 0 auto;
-    background-color: #f4f4f4;
-    height: 600px;
-}
 
 /*********** BROWSING OPTIONS ***********/
 
 .project-browse-options {
     display: flex;
     justify-content: space-between;
+    clear: both;
 }
 
 
