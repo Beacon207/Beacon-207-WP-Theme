@@ -30,9 +30,9 @@
     
         <div id="inner-page" class="all-artists-main">
            
-        <div class="all-artists-head">
+        <div class="archive-head">
             <h1>Browse Artists</h1>
-            <p>&#40;sorted alphabetically by last name&#41;</p>
+            <p>sorted alphabetically by last name</p>
         </div>      
                                 
         <div class="all-artists-main"> 
@@ -42,12 +42,16 @@
                 foreach($artists as $artist){
                     extract($artist-> additional_fields);
                     
-                    echo  ' <div class="one-artist">
+                    if ( $additional_picture == "" || $additional_picture == null) {
+                    
+                        
+                    }
+                    
+                    echo  '<div class="one-artist">
                                 <a href="' . $artist -> permalink . '">
                                 <img src="' . $additional_picture['url'] . '">
-                                </a>
                                 <p class="one-artist-first">' . $first_name . '</p>
-                                <p class="one-artist-last">' . $last_name . '</p> 
+                                <p class="one-artist-last">' . $last_name . '</p></a>
                             </div>';
                 }
                    
