@@ -33,38 +33,30 @@
                 </div>
             </div>
             
-            <div class="single-artist-about">
-                <div class="single-artist-headshot">
-                    <img src="<?php echo $additional_picture['url']; ?>">
-                </div>
-                <div class="single-artist-bio">
-                   <h3>Biography</h3>
-                    <div class="artist-bio"><?php  echo $artist -> content_filtered; ?></div>
-                </div>
-            </div>
+          
             
-            <?php
-                
-                if ($artist_headshot == "" || $artist_headshot == null) {
-                    echo '<div class="single-artist-about">
-                            <div class="single-artist-bio-only">
-                                <h3>Biography</h3>
-                                <div>' . $artist_bio . '</div>
-                            </div>
-                        </div>';
-                } else {
-                    echo '<div class="single-artist-about">
-                            <div class="single-artist-headshot">
-                                <img src="' . $artist_headshot . '">
-                            </div>
-                            <div class="single-artist-bio">
-                                <h3>Biography</h3>
-                                <div>' . $artist_bio . '</div>
-                            </div>
-                        </div>';
-                }   
-        
-            ?>
+
+            <div class="single-artist-about">
+
+                <?php
+
+                    if (!$additional_picture) {
+                        echo    '<div class="single-artist-bio-only">
+                                    <h3>Biography</h3>
+                                    <div>' . $artist -> content_filtered . '</div>
+                                </div>';
+                    } else {
+                        echo    '<div class="single-artist-headshot">
+                                    <img src="' . $additional_picture['sizes']['medium'] . '">
+                                </div>
+                                <div class="single-artist-bio">
+                                    <h3>Biography</h3>
+                                    <div>' . $artist -> content_filtered . '</div>
+                                </div>';
+                    }   
+            
+                ?>
+            </div>
 
             <div class="artist-more"> 
                 <div class="artist-sidebar">
@@ -108,7 +100,7 @@
                                     </div>';
                         }
                     ?>
-                    
+
                 </div>
 
             </div>
