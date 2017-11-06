@@ -23,8 +23,8 @@
 	<div id="inner-page" class="single-artist-main">
            
             <div class="single-artist-head">
-                <h1><span class="artist-first-name"><?php echo $first_name; ?></span> 
-                    <span class="artist-last-name"><?php echo $last_name; ?></span></h1>
+                <h2><span class="artist-first-name"><?php echo $first_name; ?></span> 
+                    <span class="artist-last-name"><?php echo $last_name; ?></span></h2>
                 <div class="artist-medium">
                    <p><?php echo $preferred_medium; ?></p>
                 </div>
@@ -94,20 +94,16 @@
                  
                     <?php 
                         if($interview){
-                            echo    '<div class="artist-main-interview">
-                                        <h3>Q&amp;A</h3>
-                                        <div class="question-and-answer">' . $interview . '</div>
-                                    </div>';
+                            echo '<h3>Q&amp;A</h3>
+                                    <div class="question-and-answer">' . $interview . '</div>';
                         }
                     ?>
 
                 </div>
-
             </div>
 
-            
             <div class="back-button">
-                <a href="<?php echo site_url(); ?>artist/">&larr; Back to all artists</a>
+                <a href="<?php echo site_url(); ?>/artist/">&larr; Back to all artists</a>
             </div>
 
         <!-- End inner page -->
