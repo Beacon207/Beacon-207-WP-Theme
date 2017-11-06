@@ -9,6 +9,7 @@
     print_r($artist);
     echo "-->";
 
+    extract( $artist -> additional_fields);
 
     // RENDER THEME HEADER
     echo get_header();
@@ -21,19 +22,19 @@
 	<div id="inner-page" class="single-artist-main">
            
             <div class="single-artist-head">
-                <h1><span class="artist-first-name"><?php echo $artist -> additional_fields['first_name']; ?></span> 
-                    <span class="artist-last-name"><?php echo $artist -> additional_fields['last_name']; ?></span></h1>
+                <h1><span class="artist-first-name"><?php echo $first_name; ?></span> 
+                    <span class="artist-last-name"><?php echo $last_name; ?></span></h1>
                 <div class="artist-medium">
-                   <p><?php echo $artist -> additional_fields['preferred_medium']; ?></p>
+                   <p><?php echo $preferred_medium; ?></p>
                 </div>
                 <div class="artist-location">
-                    <p><span class="artist-city"><?php echo $artist -> additional_fields['location']; ?></span></p>
+                    <p><span class="artist-city"><?php echo $location; ?></span></p>
                 </div>
             </div>
             
             <div class="single-artist-about">
                 <div class="single-artist-headshot">
-                    <img src="<?php echo $artist -> additional_fields['additional_picture']['url']; ?>">
+                    <img src="<?php echo $additional_picture['url']; ?>">
                 </div>
                 <div class="single-artist-bio">
                    <h3>Biography</h3>
@@ -61,25 +62,34 @@
                     </div>
                     <div class="artist-contact">
                         <h3>Connect</h3>
-                        <div class="artist-website">
-                            <a href="#" target="_blank"><?php echo $artist -> additional_fields['website']; ?></a>
-                        </div>
-                        <div class="artist-social-icons">
+                        <?php
+                            if($website){
+                                echo    '<div class="artist-website">
+                                            <a href="' . $website . '" target="_blank">' . $website . '</a>
+                                        </div>';
+                            }
+                        ?>
+                       
+                        <!-- <div class="artist-social-icons">
                             <a href="#" target="_blank"><img src="img/001-twitter-sign.png"></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="artist-main-interview">
-                    <h3>Q&amp;A</h3>
-                    <div class="question-and-answer">
-                        <?php echo $artist -> additional_fields['interview']; ?>
-                    </div>
-                </div>
+
+                <?php 
+                    if($interview){
+                        echo    '<div class="artist-main-interview">
+                                    <h3>Q&amp;A</h3>
+                                    <div class="question-and-answer">' . $interview . '</div>
+                                </div>';
+                    }
+                ?>
+                
             </div>
 
             
             <div class="back-button">
-                <a href="http://localhost/beaconmedia/artist/">&larr; Back to all artists</a>
+                <a href="<?php echo site_url(); ?>artist/">&larr; Back to all artists</a>
             </div>
 
         <!-- End inner page -->

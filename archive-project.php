@@ -29,43 +29,32 @@
             
             <div id="main-projects">
               
-            <?php
-                
-                foreach($projects as $project) {
-
-                    $html = $project -> thumbnail;
-                    $doc = new DOMDocument();
-                    $doc->loadHTML($html);
-                    $xpath = new DOMXPath($doc);
-                    $src = $xpath->evaluate("string(//img/@src)");
+                <?php
                     
-                    echo ' <a href="' . $project -> guid . '" class="single-project-container">            <div>
-                                <img img src="' . $src . '" alt="Project image" class="image">
-                                    <div class="overlay">
-                                        <div class="overlay-text">
-                                            <div class="overlay-text-artist">' . $project -> artist . '</div>
-                                            <div class="overlay-text-project">' . $project -> post_title . '</div>
+                    foreach($projects as $project) {
+     
+                        extract((array) $project);
+
+                        echo '  <a href="' . $guid . '" class="single-project-container">
+                                    <div>
+                                        <img src="' . $featured_image['medium'] . '" alt="Project image" class="image">
+                                        <div class="overlay">
+                                            <div class="overlay-text">
+                                                <div class="overlay-text-artist">' . $artist -> post_title . '</div>
+                                                <div class="overlay-text-project">' . $post_title . '</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div></a> ';
+                                </a> ';
+                        
+                    }
                     
-                }
-                
-            ?>
+                ?>
                
-                <!--<a href="#" class="single-project-container"><div>
-                    <img img src="img/img_placeholder.jpg" alt="Project image" class="image">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <div class="overlay-text-artist">John Doe</div>
-                            <div class="overlay-text-project">Name of Collection</div>
-                        </div>
-                    </div>
-                </div></a>-->
             </div>
            
             <div class="back-button">
-                <a href="http://localhost/beaconmedia/artist/">&larr; View All Artists</a>
+                <a href="<?php echo site_url(); ?>/artist/">&larr; View All Artists</a>
             </div>
               
         <!-- End inner page -->

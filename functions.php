@@ -67,14 +67,16 @@
 
 	// GET PROJECT
 	function get_project($post, $getFull = true){
-		$post -> thumbnail = get_the_post_thumbnail($post -> ID, array(200));
-		$post -> content_filtered = apply_filters('the_content', $post -> post_content);
-		if($getFull){
-			$post -> additional_fields = get_fields($post -> ID);
-			$post -> artist = get_artist($post -> additional_fields['artist']);
-			unset($post -> additional_fields['artist']);
-		}
+		
+		$post -> featured_image = get_image_paths($post -> ID);
 
+		$post -> content_filtered = apply_filters('the_content', $post -> post_content);
+
+		$post -> additional_fields = get_fields($post -> ID);
+
+		$post -> artist = get_artist($post -> additional_fields['artist'], $getFull);
+		unset($post -> additional_fields['artist']);
+		
 
 		return $post;
 	}
@@ -91,5 +93,16 @@
 		}
 
 		return $projects;
+	}
+
+
+	// GET IMAGE SIZES
+	function get_image_paths($postId){
+		$photoId = get_post_thumbnail_id($postId);
+		return array(
+			"thumb" => wp_get_attachment_image_src($photoId, 'thumbnail')[0],
+			"medium" => wp_get_attachment_image_src($photoId, 'medium')[0],
+			"large" => wp_get_attachment_image_src($photoId, 'large')[0],
+		);
 	}
 
