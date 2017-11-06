@@ -20,13 +20,14 @@
 
 
     // you can also output in javascript and use your developer tools to look at it...
+    /*
     echo '  <script>
                 console.log("project:");
                 console.log(' . json_encode($project) . ');
                 console.log("artist:");
                 console.log(' . json_encode($artist) . ')
             </script>';
-
+    */
 
     ///////////////////////////////////////////////////
 
@@ -37,6 +38,7 @@
 
 
     // here's an example HTML block that shows you how to fetch some different information from the data object returned 
+    /*
     echo '  <div style="padding: 50px; border: solid 1px #ccc; margin: 50px;">
                 <b>Artist Name:</b><br />' . $artist -> post_title . 
                 '<br /><br /><b>Arist First Name:</b><br />' . $artist -> additional_fields['first_name'] . 
@@ -45,7 +47,7 @@
                     echo $project -> post_title . '<br />';
                 }
     echo    '</div>';
-
+    */
  ?>
 
 
@@ -71,18 +73,17 @@
            <div class="project-with-thumbnails">
                <p>Click thumbnails to enlarge</p>
                 <div class="thumbnails-display">
-                    <div class="one-thumbnail">
-                        <a href="#"><img src="img/img_placeholder.jpg" alt="gallery thumbnail"></a>
-                    </div>
-                    <div class="one-thumbnail">
-                        <a href="#"><img src="img/img_placeholder2.jpeg" alt="gallery thumbnail"></a>
-                    </div>
-                    <div class="one-thumbnail">
-                        <a href="#"><img src="img/img_placeholder.jpg" alt="gallery thumbnail"></a>
-                    </div>
-                    <div class="one-thumbnail">
-                        <a href="#"><img src="img/img_placeholder2.jpeg" alt="gallery thumbnail"></a>
-                    </div>
+                   
+                   <?php 
+                    
+                        foreach ( $project -> additional_fields['images'] as $img ) {
+                            echo ' <div class="one-thumbnail">
+                        <a href="#"><img src="' . $img['image']['sizes']['thumbnail'] . '" alt="gallery thumbnail"></a>
+                    </div> '; 
+                        }
+                    
+                    ?>
+
                 </div>
             </div>
             <div class="single-project-image-lg">
@@ -97,9 +98,9 @@
             </div> -->
         </div>
         
-        <div class="project-comments">
-            <!-- Not sure if Max still wants this...but I am assuming there is a plugin for comments, and that I do not need to hand code it! -->
-        </div>
+        <!--<div class="project-comments">
+            Not sure if Max still wants this...but I am assuming there is a plugin for comments, and that I do not need to hand code it!
+        </div>-->
         
         <div class="project-browse-options">
             <div class="back-button">
