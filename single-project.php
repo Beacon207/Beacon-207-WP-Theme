@@ -78,7 +78,7 @@
                     
                         foreach ( $project -> additional_fields['images'] as $img ) {
                             echo ' <div class="one-thumbnail">
-                        <a href="#"><img src="' . $img['image']['sizes']['thumbnail'] . '" alt="gallery thumbnail"></a>
+                        <a href="#"><img src="' . $img['image']['sizes']['thumbnail'] . '" alt="'  . $img['image']['alt'] .'"></a>
                     </div> '; 
                         }
                     
