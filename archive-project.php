@@ -22,10 +22,12 @@
 
     <main>
     
-        <div id="inner-page">
-            <div id="inner-head">
-                <h1>Artist Collections</h1>
-            </div>
+        <div id="inner-page" class="all-projects-main">
+           
+            <div class="archive-head">
+                <h1>Browse Collections</h1>
+                <p>Click to view entire body of work</p>
+            </div> 
                 
             
             <div id="main-projects">
@@ -54,8 +56,10 @@
                
             </div>
            
-            <div class="back-button">
-                <a href="<?php echo site_url(); ?>/artist/">&larr; View All Artists</a>
+            <div class="browse-options">
+                <div class="back-button">
+                    <a href="<?php echo site_url(); ?>/artist/">&larr; View All Artists</a>
+                </div>
             </div>
               
         <!-- End inner page -->

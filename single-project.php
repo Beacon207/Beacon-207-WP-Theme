@@ -55,7 +55,7 @@
         <!-- END project-content-container -->
         </div>
         
-        <div class="project-browse-options">
+        <div class="browse-options">
             <div class="back-button">
                 <a href="<?php echo site_url(); ?>/project/">&larr; all projects</a>
             </div>

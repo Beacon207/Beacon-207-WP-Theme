@@ -686,7 +686,7 @@ PAGE: SINGLE ARTIST
 
 /***********************************
 
-PAGE: SINGLE PROJECT
+PAGE: SINGLE PROJECT - OK
 
 ***********************************/
 
@@ -742,11 +742,11 @@ PAGE: SINGLE PROJECT
 
 
 
-/**************
+/*************************
 
 LIGHTBOX WITH JQUERY
 
-***************/
+*************************/
 
 
 
@@ -757,13 +757,7 @@ LIGHTBOX WITH JQUERY
 
 
 
-/*********** BROWSING OPTIONS ***********/
 
-.project-browse-options {
-    display: flex;
-    justify-content: space-between;
-    clear: both;
-}
 
 
 
@@ -819,33 +813,36 @@ PAGE: ALL ARTISTS
 
 
 
-/***********************************
 
-PAGE: ALL PROJECTS
 
-***********************************/
+
 
 
 
 
 /***********************************
 
-BACK BUTTON
+BROWSING BUTTONS
 
 ***********************************/
+
+.browse-options {
+    display: flex;
+    justify-content: space-between;
+    clear: both;
+    margin-top: 200px;
+}
 
 .back-button {
     font-size: .9em;
 }
 
 .back-button a {
-    margin-top: 100px;
     display: inline-block;
     border: 2px solid #000;
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 5px;
     text-transform: uppercase;
-    font-weight: bold;
     color: #000;
 }
 

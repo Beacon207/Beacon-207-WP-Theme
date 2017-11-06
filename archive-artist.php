@@ -60,8 +60,10 @@
             
         </div>
         
-        <div class="back-button">
-            <a href="<?php echo site_url(); ?>/project/">&larr; View All Collections</a>
+        <div class="browse-options">
+            <div class="back-button">
+                <a href="<?php echo site_url(); ?>/project/">&larr; View All Collections</a>
+            </div>
         </div>
 
         <!-- End inner page -->

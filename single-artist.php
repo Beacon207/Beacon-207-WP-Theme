@@ -101,9 +101,11 @@
 
                 </div>
             </div>
-
-            <div class="back-button">
-                <a href="<?php echo site_url(); ?>/artist/">&larr; Back to all artists</a>
+            
+            <div class="browse-options">
+                <div class="back-button">
+                    <a href="<?php echo site_url(); ?>/artist/">&larr; Back to all artists</a>
+                </div>
             </div>
 
         <!-- End inner page -->
