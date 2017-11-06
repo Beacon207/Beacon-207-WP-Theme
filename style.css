@@ -28,7 +28,6 @@ OVERALL STYLES
 ***********************************/
 
 a, a:visited, a:active {
-    
     text-decoration: none;
 }
 
@@ -71,17 +70,12 @@ header a {
 
 
 
-
-
 /***********************************
 
 HEADER: NAV
 
 ***********************************/
 
-#nav-primary {
-
-}
 
 #nav-primary ul{
   list-style: none;
@@ -105,7 +99,6 @@ HEADER: NAV
 #nav-primary li.current_page_item a {
     border-bottom: 2px solid #fff;
 }
-
 
 
 
@@ -222,6 +215,7 @@ MAIN: FEATURED WORKS
 }
 
 
+
 /***********************************
 
 MAIN: PORTFOLIO
@@ -250,13 +244,9 @@ MAIN: PORTFOLIO
 
 
 
-
-
-
-
 /***********************************
 
-SUPPORTERS
+MAIN: SUPPORTERS
 
 ***********************************/
 
@@ -316,6 +306,8 @@ footer {
 .social img {
     max-width: 100%;
 }
+
+
 
 
 /***********************************
@@ -610,16 +602,21 @@ textarea {
 
 
 
+
 /***********************************
 
 PAGE: SINGLE ARTIST
 
 ***********************************/
 
-.single-artist-head, .single-artist-main h3 {
+.single-artist-head, .single-artist-main h3, .single-artist-main h4 {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0;
+}
+
+.single-artist-main h3 {
+    font-size: 1.5em;
 }
 
 .single-artist-main img {
@@ -635,18 +632,19 @@ PAGE: SINGLE ARTIST
 
 .single-artist-head {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 75px;
 }
 
-.single-artist-head h1 {
+.single-artist-head h2 {
     font-size: 3em;
     display: inline-block;
     padding: .5em 0;
     border-top: 5px solid #222;
     border-bottom: 5px solid #222;
+    margin-bottom: .5em;
 }
 
-.single-artist-head .artist-first-name {
+.artist-first-name {
     font-weight: normal;
 }
 
@@ -664,36 +662,29 @@ PAGE: SINGLE ARTIST
     align-items: flex-start;
 }
 
+.single-artist-about {
+    width: 100%;
+}
+
 /* LEFT COL */
-.single-artist-headshot, .contact-and-links {
+.single-artist-headshot, .artist-sidebar {
     width: 25%;
 }
 
 
 /* RIGHT COL */
 .single-artist-bio, .artist-main-interview {
-    width: 70%;
+    width: 68%;
 }
 
-
-/*********** ARTIST ABOUT ***********/
-
-.single-artist-about {
-    margin-bottom: 50px;
-}
-
-.single-artist-bio h3, .artist-main-interview h3 {
-    font-size: 1.5em;
+.single-artist-bio-only {
+    width: 100%;
 }
 
 
 /*********** ARTIST SIDEBAR ***********/
 
-.artist-sidebar {
-    font-size: .9em;
-}
-
-.artist-sidebar h3 {
+.artist-sidebar h4 {
     margin-bottom: .5em;
 }
 
@@ -709,10 +700,6 @@ PAGE: SINGLE ARTIST
 .artist-social-icons img {
     width: 20px;
     margin-top: 5px;
-}
-
-.artist-project-links {
-    margin-right: 4.5em;
 }
 
 .artist-project-links ul {
