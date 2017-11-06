@@ -9,16 +9,6 @@
     print_r($artist);
     echo "-->";
     
-    //For the Artist Header
-    $artist_first = $artist -> additional_fields['first_name'];
-    $artist_last = $artist -> additional_fields['last_name'];
-    $artist_medium = $artist -> additional_fields['preferred_medium'];
-    $artist_location = $artist -> additional_fields['location'];
-
-    //Artist Main Page
-    $artist_headshot = $artist -> additional_fields['additional_picture']['url'];
-    $artist_bio = $artist -> content_filtered;
-    $artist_interview = $artist -> additional_fields['interview'];
 
     extract( $artist -> additional_fields);
 
@@ -52,11 +42,6 @@
                     <div class="artist-bio"><?php  echo $artist -> content_filtered; ?></div>
                 </div>
             </div>
-=======
-                <h2><span class="artist-first-name"><?php echo $artist_first; ?></span> <?php echo $artist_last; ?></h2>
-                <p><?php echo $artist_medium; ?></p>
-                <p><?php echo $artist_location; ?></p>
-            </div>
             
             <?php
                 
@@ -80,7 +65,6 @@
                 }   
         
             ?>
->>>>>>> e5f43f65e3e986b426162089601cd1e21e4f43db
 
             <div class="artist-more"> 
                 <div class="artist-sidebar">
@@ -99,8 +83,7 @@
                         </ul>
                     </div>
                     <div class="artist-contact">
-<<<<<<< HEAD
-                        <h3>Connect</h3>
+                        <h4>Connect</h4>
                         <?php
                             if($website){
                                 echo    '<div class="artist-website">
@@ -113,46 +96,21 @@
                             <a href="#" target="_blank"><img src="img/001-twitter-sign.png"></a>
                         </div> -->
                     </div>
-=======
-                        <h4>Connect</h4>
-                        <div class="artist-website">
-                            <a href="#" target="_blank"><?php echo $artist -> additional_fields['website']; ?></a>
-                        </div>
-                        <!-- Social Icons -->
-                        <!--<div class="artist-social-icons">
-                            <a href="#" target="_blank"><img src="img/001-twitter-sign.png"></a>
-                        </div>-->
-                    </div>
                 </div>
                 
                 <div class="artist-main-interview">
                  
-                 <?php
-                  
-                  if ($artist_interview == "" || $artist_interview == null) {
-                      
-                      echo "<div></div>";
-                      
-                  } else {
-                      
-                      echo '<h3>Q&amp;A</h3>
-                            <div class="question-and-answer">' . $artist_interview . '</div>';
-                  }
-                      
-                ?>
+                    <?php 
+                        if($interview){
+                            echo    '<div class="artist-main-interview">
+                                        <h3>Q&amp;A</h3>
+                                        <div class="question-and-answer">' . $interview . '</div>
+                                    </div>';
+                        }
+                    ?>
                     
->>>>>>> e5f43f65e3e986b426162089601cd1e21e4f43db
                 </div>
 
-                <?php 
-                    if($interview){
-                        echo    '<div class="artist-main-interview">
-                                    <h3>Q&amp;A</h3>
-                                    <div class="question-and-answer">' . $interview . '</div>
-                                </div>';
-                    }
-                ?>
-                
             </div>
 
             
