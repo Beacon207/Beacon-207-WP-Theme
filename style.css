@@ -25,6 +25,8 @@ body {
     font-size: 100%;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 a, a:visited, a:active {
@@ -688,40 +690,39 @@ PAGE: SINGLE PROJECT
 
 ***********************************/
 
-
-.single-project-head {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.single-project-head h2, .single-project-head h3 {
-    margin: 0;
-}
-
-.single-project-head h2 {
-    font-size: 2.25em;
-}
-
-.single-project-description {
-    text-align: justify;
-    font-size: .8em;
-}
-
-.project-sidebar h4 {
-    margin-top: 50px;
-    text-transform: uppercase;
-    font-size: .8em;
-    color: #6b6b6b;
-}
-
 .project-sidebar {
-    width: 30%;
+    width: 32%;
     float: left;
 }
 
 .project-content-container {
     width: 60%;
     float: right;
+}
+
+.project-sidebar h2, .project-sidebar h3, .project-sidebar h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.project-sidebar h2 {
+    font-size: 2.35em;
+}
+
+.project-sidebar p {
+    text-align: justify;
+    font-size: .8em;
+    display: inline-block;
+    margin-bottom: 60px;
+}
+
+.project-sidebar h4 a {
+    color: #333;
+}
+
+.project-sidebar h4 a:hover {
+    color: #878787;
 }
 
 /***** FOR PHOTOGRAPHS *****/
@@ -737,6 +738,21 @@ PAGE: SINGLE PROJECT
 }
 
 /***** FOR VIDEO *****/
+
+
+
+
+/**************
+
+LIGHTBOX WITH JQUERY
+
+***************/
+
+
+
+
+
+
 
 
 
@@ -818,10 +834,14 @@ BACK BUTTON
 
 ***********************************/
 
+.back-button {
+    font-size: .9em;
+}
+
 .back-button a {
     margin-top: 100px;
     display: inline-block;
-    border: 3px solid #000;
+    border: 2px solid #000;
     padding: 8px;
     border-radius: 4px;
     text-transform: uppercase;
