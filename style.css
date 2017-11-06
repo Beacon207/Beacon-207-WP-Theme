@@ -832,20 +832,20 @@ PAGE: ALL ARTISTS
 
 ***********************************/
 
-.all-artists-head {
+.archive-head {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 3px;
-    display: inline-block;
-    margin: 0 auto;
+    display: block;
+    margin: 0 auto 100px;
 }
 
-.all-artists-head p {
+.archive-head p {
     letter-spacing: 1px;
+    font-size: .85em;
 }
 
 .all-artists-main {
-    margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -864,6 +864,10 @@ PAGE: ALL ARTISTS
 
 .one-artist p {
     margin: 0;
+}
+
+.one-artist a {
+    color: #000;
 }
 
 .one-artist-last {
