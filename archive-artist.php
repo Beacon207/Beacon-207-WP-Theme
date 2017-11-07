@@ -49,6 +49,7 @@
                         }
                     ?>
                 </div>
+            <!-- END archive-main -->    
             </div>
         
             <div class="browse-options">

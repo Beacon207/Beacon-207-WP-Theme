@@ -43,7 +43,7 @@ a, a:visited, a:active {
 
 /***********************************
 
-HEADER: MAIN
+HEADER
 
 ***********************************/
 
@@ -76,10 +76,9 @@ header a {
 
 
 
-
 /***********************************
 
-HEADER: NAV
+NAVIGATION
 
 ***********************************/
 
@@ -112,7 +111,7 @@ HEADER: NAV
 
 /***********************************
 
-MAIN: FEATURE
+HOME PAGE: FEATURE
 
 ***********************************/
 
@@ -155,7 +154,7 @@ MAIN: FEATURE
 
 /***********************************
 
-MAIN: TAGLINE
+HOME PAGE: TAGLINE
 
 ***********************************/
 
@@ -179,7 +178,7 @@ MAIN: TAGLINE
 
 /***********************************
 
-MAIN: FEATURED WORKS
+HOME PAGE: FEATURED WORKS
 
 ***********************************/
 
@@ -225,7 +224,7 @@ MAIN: FEATURED WORKS
 
 /***********************************
 
-MAIN: PORTFOLIO
+HOME PAGE: PORTFOLIO
 
 ***********************************/
 
@@ -253,73 +252,7 @@ MAIN: PORTFOLIO
 
 /***********************************
 
-MAIN: SUPPORTERS
-
-***********************************/
-
-#supporters {
-    background-color: #f6f6f6;
-    text-align: center;
-    padding: 140px 0;
-}
-
-#supporters h3 {
-    margin: 0 auto 100px;
-    color: #666;
-    text-transform: uppercase;
-}
-
-#supporter-list {
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-    margin: 0px auto;
-}
-
-.supporter-icon {
-    width: 120px;
-}
-
-.supporter-icon img {
-    max-width: 100%;
-}
-
-
-
-
-/***********************************
-
-FOOTER
-
-***********************************/
-
-footer {
-    background-color: #000;
-    padding: 30px 0;
-}
-
-#social-icons {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    margin: 0 auto;
-}
-
-.social {
-    width: 30px;
-    padding: 0 10px;
-}
-
-.social img {
-    max-width: 100%;
-}
-
-
-
-
-/***********************************
-
-MAIN SECTION: ALL OTHER PAGES
+ALL OTHER PAGES: MAIN SECTION
 
 ***********************************/
 
@@ -329,7 +262,7 @@ MAIN SECTION: ALL OTHER PAGES
     line-height: 1.5;
 }
 
-/**** FOR STATIC PAGE SUB HEADER *****/
+/**** FOR STATIC PAGES: SUB HEADER *****/
 
 #inner-head {
     margin-bottom: 50px;
@@ -343,6 +276,16 @@ MAIN SECTION: ALL OTHER PAGES
     font-weight: bold;
     width: 75%;
 }
+
+
+
+/**************************************
+*
+*
+***********  STATIC PAGES  ************
+*
+*
+***************************************/
 
 
 
@@ -360,77 +303,6 @@ PAGE: OUR MISSION
 
 .mission-col {
     width: 45%;
-}
-
-
-
-/***********************************
-
-PAGE: PORTFOLIOS
-
-***********************************/
-
-#main-projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 50px 0;
-}
-
-.single-project-container {
-    position: relative;
-    width: 25%;
-}
-
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, .6);
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    -webkit-transition: .5s ease;
-    -o-transition: .5s ease;
-    transition: .5s ease;
-}
-
-.single-project-container:hover .overlay {
-    height: 100%;
-}
-
-.overlay-text {
-    text-align: center;
-    white-space: nowrap; 
-    color: #fff;
-    font-size: 20px;
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.overlay-text-artist {
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding-bottom: 2px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #fff;
-}
-
-.overlay-text-project {
-    font-style: italic;
 }
 
 
@@ -570,6 +442,149 @@ textarea {
 .contact-phone a {
     color: #262626;
 }
+
+
+
+
+/**************************************
+*
+*
+***********  POSTS  ************
+*
+*
+***************************************/
+
+
+
+/***********************************
+
+ARCHIVE PAGES - ARTISTS AND PROJECTS
+
+***********************************/
+
+.archive-head {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0 auto 100px;
+}
+
+.archive-head h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.archive-head p {
+    margin-top: 1.5em;
+    font-size: .7em;
+}
+
+
+
+/***********************************
+
+PAGE: ARTIST ARCHIVE - OK
+
+***********************************/
+
+
+.archive-artist-list {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.archive-main img {
+    max-width: 100%;
+}
+
+.one-artist {
+    width: 20%;
+    margin: 0 2.5% 40px;
+    float: left;
+}
+
+.one-artist p {
+    margin: 0;
+}
+
+.one-artist a {
+    color: #000;
+}
+
+.one-artist-last {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+
+/***********************************
+
+PAGE: PROJECT ARCHIVE - OK
+
+***********************************/
+
+.single-project-container {
+    position: relative;
+    width: 25%;
+    float: left;
+}
+
+.single-project-container img {
+    max-width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.single-project-container:hover .overlay {
+    height: 100%;
+}
+
+.overlay-text {
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap; 
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.overlay-text-artist {
+    display: inline-block;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+}
+
+.overlay-text-project {
+    font-size: .75em;
+}
+
 
 
 
@@ -735,70 +750,6 @@ LIGHTBOX WITH JQUERY
 
 
 
-
-
-
-
-/***********************************
-
-PAGE: ALL ARTISTS - OK
-
-***********************************/
-
-.archive-head {
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 2px;
-    margin: 0 auto 100px;
-}
-
-.archive-head h2 {
-    font-size: 2em;
-    margin: 0;
-}
-
-.archive-head p {
-    margin-top: 1.5em;
-    font-size: .7em;
-}
-
-.archive-artist-list {
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.archive-main img {
-    max-width: 100%;
-}
-
-.one-artist {
-    width: 20%;
-    margin: 0 2.5% 40px;
-    float: left;
-}
-
-.one-artist p {
-    margin: 0;
-}
-
-.one-artist a {
-    color: #000;
-}
-
-.one-artist-last {
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-
-
-
-
-
-
-
-
-
 /***********************************
 
 BROWSING BUTTONS
@@ -828,5 +779,34 @@ BROWSING BUTTONS
 .back-button a:hover {
     color: #fff;
     background-color: #000;
+}
+
+
+
+/***********************************
+
+FOOTER
+
+***********************************/
+
+footer {
+    background-color: #000;
+    padding: 30px 0;
+}
+
+#social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.social {
+    width: 30px;
+    padding: 0 10px;
+}
+
+.social img {
+    max-width: 100%;
 }
 
