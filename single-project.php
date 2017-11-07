@@ -24,35 +24,32 @@
 
     <div id="inner-page">
        
-       <div class="project-sidebar">
-            <h3><?php echo $artist -> additional_fields['first_name']; ?> <?php echo $artist -> additional_fields['last_name']; ?></h3>
-            
-            <h2><?php echo $project -> post_title; ?></h2>
+        <div class="single-project-main">
+       
+            <div class="project-sidebar">
+                <h3><?php echo $artist -> additional_fields['first_name']; ?> <?php echo $artist -> additional_fields['last_name']; ?></h3>
+                <h2><?php echo $project -> post_title; ?></h2>
+                <!-- PROJECT DESCRIPTION -->
+                <p><?php echo $project -> post_content; ?></p>
+                <h4><a href="<?php echo $artist -> permalink; ?>">View Artist Bio</a></h4>
+            </div>
 
-            <!-- PROJECT DESCRIPTION -->
-            <p><?php echo $project -> post_content; ?></p>
-            
-            <h4><a href="<?php echo $artist -> permalink; ?>">View Artist Bio</a></h4>
-        </div>
+            <div class="project-content-container">
+                <?php
+                    if ($project -> additional_fields['type'] == "Photography") {
+
+                        foreach ( $project -> additional_fields['images'] as $img ) {
+                            echo    '<div class="one-thumbnail">
+                                    <a href="#"><img src="' . $img['image']['sizes']['medium'] . '" alt="'  . $img['image']['alt'] .'"></a>
+                                    </div>'; 
+                        }
+                    } else if ($project -> additional_fields['type'] == "Video") {
+                        echo "video goes here"; 
+                    }
+                ?>
+            </div>
         
-        <div class="project-content-container">
-        
-            <?php
-
-            if ($project -> additional_fields['type'] == "Photography") {
-
-                foreach ( $project -> additional_fields['images'] as $img ) {
-                    echo    '<div class="one-thumbnail">
-                            <a href="#"><img src="' . $img['image']['sizes']['medium'] . '" alt="'  . $img['image']['alt'] .'"></a>
-                            </div>'; 
-                }
-            } else if ($project -> additional_fields['type'] == "Video") {
-                echo "video goes here"; 
-            }
-
-            ?>
-        
-        <!-- END project-content-container -->
+        <!-- END single-project-main -->
         </div>
         
         <div class="browse-options">

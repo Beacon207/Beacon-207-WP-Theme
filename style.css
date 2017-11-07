@@ -33,6 +33,12 @@ a, a:visited, a:active {
     text-decoration: none;
 }
 
+/******** BROWSE BUTTONS CLEAR ********/
+
+.single-artist-main, .single-project-main, .archive-main {
+    overflow: hidden;
+}
+
 
 
 /***********************************
@@ -624,6 +630,10 @@ PAGE: SINGLE ARTIST - OK
     color: #878787;
 }
 
+.single-artist-sidebar a:hover {
+    color: #b7b7b7;
+}
+
 .single-artist-headshot img {
     max-width: 100%;
 }
@@ -731,38 +741,40 @@ LIGHTBOX WITH JQUERY
 
 /***********************************
 
-PAGE: ALL ARTISTS
+PAGE: ALL ARTISTS - OK
 
 ***********************************/
 
 .archive-head {
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 3px;
-    display: block;
+    letter-spacing: 2px;
     margin: 0 auto 100px;
 }
 
-.archive-head p {
-    letter-spacing: 1px;
-    font-size: .85em;
+.archive-head h2 {
+    font-size: 2em;
+    margin: 0;
 }
 
-.all-artists-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.archive-head p {
+    margin-top: 1.5em;
+    font-size: .7em;
+}
+
+.archive-artist-list {
     text-transform: uppercase;
     text-align: center;
 }
 
-.all-artists-main img {
+.archive-main img {
     max-width: 100%;
 }
 
 .one-artist {
     width: 20%;
     margin: 0 2.5% 40px;
+    float: left;
 }
 
 .one-artist p {

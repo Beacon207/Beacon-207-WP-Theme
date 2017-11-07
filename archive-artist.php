@@ -28,43 +28,34 @@
 
     <main>
     
-        <div id="inner-page" class="all-artists-main">
-           
-        <div class="archive-head">
-            <h1>Browse Artists</h1>
-            <p>sorted alphabetically by last name</p>
-        </div>      
-                                
-        <div class="all-artists-main"> 
-          
-            <?php 
+        <div id="inner-page">
+             
+            <div class="archive-main">
+                <div class="archive-head">
+                    <h2>Browse Artists</h2>
+                    <p>sorted alphabetically by last name</p>
+                </div>
+                <div class="archive-artist-list">     
+                    <?php 
+                        foreach($artists as $artist){
+                            extract($artist-> additional_fields);
 
-                foreach($artists as $artist){
-                    extract($artist-> additional_fields);
-                    
-                    if ( $additional_picture == "" || $additional_picture == null) {
-                    
-                        
-                    }
-                    
-                    echo  '<div class="one-artist">
-                                <a href="' . $artist -> permalink . '">
-                                <img src="' . $additional_picture['url'] . '">
-                                <p class="one-artist-first">' . $first_name . '</p>
-                                <p class="one-artist-last">' . $last_name . '</p></a>
-                            </div>';
-                }
-                   
-            ?>
-           
-            
-        </div>
-        
-        <div class="browse-options">
-            <div class="back-button">
-                <a href="<?php echo site_url(); ?>/project/">&larr; View All Collections</a>
+                            echo  '<div class="one-artist">
+                                        <a href="' . $artist -> permalink . '">
+                                        <img src="' . $additional_picture['url'] . '">
+                                        <p>' . $first_name . '</p>
+                                        <p class="one-artist-last">' . $last_name . '</p></a>
+                                    </div>';
+                        }
+                    ?>
+                </div>
             </div>
-        </div>
+        
+            <div class="browse-options">
+                <div class="back-button">
+                    <a href="<?php echo site_url(); ?>/project/">&larr; View All Collections</a>
+                </div>
+            </div>
 
         <!-- End inner page -->
         </div>
