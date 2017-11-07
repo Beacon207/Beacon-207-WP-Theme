@@ -35,17 +35,28 @@
             </div>
 
             <div class="project-content-container">
-                <?php
-                    if ($project -> additional_fields['type'] == "Photography") {
-
-                        foreach ( $project -> additional_fields['images'] as $img ) {
+               
+               <?php
+                
+                foreach ( $project -> additional_fields['images'] as $img ) {
                             echo    '<div class="one-thumbnail">
                                     <a href="#"><img src="' . $img['image']['sizes']['medium'] . '" alt="'  . $img['image']['alt'] .'"></a>
                                     </div>'; 
                         }
-                    } else if ($project -> additional_fields['type'] == "Video") {
-                        echo "video goes here"; 
-                    }
+                
+                ?>
+               
+                <?php
+                    //if ($project -> additional_fields['type'] == "Photography") {
+
+                        //foreach ( $project -> additional_fields['images'] as $img ) {
+                            //echo    '<div class="one-thumbnail">
+                                    //<a href="#"><img src="' . $img['image']['sizes']['medium'] . '" alt="'  . $img['image']['alt'] .'"></a>
+                                    //</div>'; 
+                        //}
+                    //} else if ($project -> additional_fields['type'] == "Video") {
+                        //echo "video goes here"; 
+                    //}
                 ?>
             </div>
         
