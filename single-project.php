@@ -46,6 +46,8 @@
                 
                 ?>
                
+               <!-- For some reason this code did not work for me
+               Trying to get this to print ONLY with the photography type -->
                 <?php
                     //if ($project -> additional_fields['type'] == "Photography") {
 
