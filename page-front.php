@@ -1,7 +1,13 @@
 <?php
   /* Template Name: FP Template */
 
-  echo get_header();
+    // LOAD DATA FOR THE LIST OF PROJECTS
+    $projects = get_project_list();
+    echo "<!--";
+    print_r($projects);
+    echo "-->";
+    
+    echo get_header();
 ?>
 
 
@@ -36,17 +42,22 @@
             </div>
             <div class="line"></div>
         </div>
-
+        
         <div class="featured-works">
-            <div class="home-featured-item">
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/example/sample_home_gallery1.JPG" alt="money and sex"></a>
-            </div>
-            <div class="home-featured-item">
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/example/sample_home_gallery2.png" alt="collage and birds"></a>
-            </div>
-            <div class="home-featured-item">
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/example/sample_home_gallery3.png" alt="a women illustration"></a>
-            </div>
+            
+            <?php
+                $i = 0;
+                foreach($projects as $project) {
+                    extract((array) $project);
+                    if ($i < 3) {
+                        echo '  <div class="home-featured-item"><a href="' . $guid . '">
+                                    <img src="' . $featured_image['medium'] . '" alt="Project image">
+                                </a></div> ';
+                        $i++;
+                    }
+                }
+            ?>
+            
         </div>
         
         <div class="home-button">
