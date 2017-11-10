@@ -107,48 +107,78 @@ NAVIGATION
 }
 
 
+/***********************************
+
+HOME PAGE: WRAP STYLINGS
+
+***********************************/
+
+.home-wrap {
+    text-align: center;
+    line-height: 2;
+}
+
+.home-wrap h1, .home-wrap h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
 
 
 /***********************************
 
-HOME PAGE: FEATURE
+HOME PAGE: BUTTONS
 
 ***********************************/
 
-#home-feature {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 600px;
-    display: flex;
-    padding-left: 20px;
-    padding-bottom: 15px;
+.home-button {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    background-color: #000;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
-#home-feature-artist {
-    align-self: flex-end;
-    background-color: rgba(255, 255, 255, .6);
-    padding: 10px;
-    border-bottom: 6px solid #fff;
-}
-
-#home-feature-artist p {
-    font-weight: bold;
-    font-size: .9em;
-    padding: 2px 0;
-    letter-spacing: 1.2px;
+.home-button p {
     margin: 0;
 }
 
-#home-feature-artist p a {
-    color: #000;
-    text-decoration: underline;
+.home-button a {
+    color: #fff;
 }
 
-#home-feature-artist p a:hover {
-    color: #636363;
+.home-button:hover {
+    background-color: #444;
 }
 
+
+
+
+/***********************************
+
+HOME PAGE: FEATURED IMAGE
+
+***********************************/
+
+.home-featured {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 425px;
+    position: relative;
+}
+
+.feature-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 
 
@@ -158,21 +188,38 @@ HOME PAGE: TAGLINE
 
 ***********************************/
 
-#tagline-main {
-    text-align: center;
-}
 
 .tagline {
-    padding: 8px 20px;
-    margin: 150px 0 0;
-    letter-spacing: 1.4px;
+    font-size: 1.25em;
+    margin: 100px auto;
     display: inline-block;
-    text-transform: uppercase;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
 }
 
-.tagline h1 {
-    font-size: 2em;
+
+
+/***********************************
+
+HOME PAGE: INTRODUCTION
+
+***********************************/
+
+.home-intro {
+    padding: 120px 0;
 }
+
+.home-intro-text {
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 40px;
+}
+
+.intro-paragraph {
+    margin-bottom: 50px;
+}
+
 
 
 
@@ -182,69 +229,47 @@ HOME PAGE: FEATURED WORKS
 
 ***********************************/
 
-#view-more-main {
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.5;
-    margin: 160px auto 40px;
+.home-featured-secondary {
+    padding: 100px 0;
 }
 
-#arrow {
-    margin: 60px auto 120px;
-    width: 30px;
-}
-
-#arrow img {
-    max-width: 100%;
-}
-
-#featured-works {
+.latest-works {
+    width: 80%;
+    margin: 0px auto 60px;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-around;
+    align-items: center;
+}
+
+.line {
+    width: 30%;
+    height: 2px;
+    background-color: #000;
+}
+
+.featured-works {
+    width: 50%;
+    margin: 0 auto 120px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .home-featured-item {
-    width: 33.333%
+    width: 160px;
 }
 
 .home-featured-item img {
     max-width: 100%;
     display: block;
-    -webkit-transition: all 0.8s ease;
-    -o-transition: all 0.8s ease;
-    transition: all 0.8s ease;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .home-featured-item img:hover {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
-}
-
-
-
-/***********************************
-
-HOME PAGE: PORTFOLIO
-
-***********************************/
-
-
-#portfolio {
-    text-transform: uppercase;
-    text-align: center;
-    margin: 200px auto;
-    font-size: .7em;
-    letter-spacing: 2px;
-    width: 280px;
-    padding: 8px;
-    background-color: #222;
-    -webkit-transition: all 0.6s ease;
-    -o-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-}
-
-#portfolio:hover {
-    background-color: #444;
 }
 
 
