@@ -53,8 +53,8 @@
             </div>
         
             <div class="browse-options">
-                <div class="back-button">
-                    <a href="<?php echo site_url(); ?>/project/">&larr; View All Collections</a>
+                <div class="home-button">
+                    <p><a href="<?php echo site_url(); ?>/project/">&larr; View All Projects</a></p>
                 </div>
             </div>
 

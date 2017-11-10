@@ -73,8 +73,8 @@
         </div>
             
         <div class="browse-options">
-            <div class="back-button">
-                <a href="<?php echo site_url(); ?>/artist/">&larr; Back to all artists</a>
+            <div class="home-button">
+                <p><a href="<?php echo site_url(); ?>/artist/">&larr; View all artists</a></p>
             </div>
         </div>
             

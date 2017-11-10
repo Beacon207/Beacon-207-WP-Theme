@@ -26,7 +26,7 @@
            
             <div class="archive-main">
                 <div class="archive-head">
-                    <h2>Browse Collections</h2>
+                    <h2>Browse Projects</h2>
                     <p>Click to view entire body of work</p>
                 </div> 
 
@@ -53,8 +53,8 @@
             </div>
             
             <div class="browse-options">
-                <div class="back-button">
-                    <a href="<?php echo site_url(); ?>/artist/">&larr; View All Artists</a>
+                <div class="home-button">
+                    <p><a href="<?php echo site_url(); ?>/artist/">&larr; View All Artists</a></p>
                 </div>
             </div>
               
