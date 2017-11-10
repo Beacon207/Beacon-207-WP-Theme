@@ -708,7 +708,7 @@ PAGE: SINGLE PROJECT
 ***********************************/
 
 .project-sidebar {
-    width: 32%;
+    width: 28%;
     float: left;
 }
 
@@ -740,15 +740,15 @@ PAGE: SINGLE PROJECT
 /***** FOR PHOTOGRAPHS *****/
 
 .project-content-container {
-    width: 60%;
+    width: 65%;
     float: right;
 }
 
 .one-thumbnail {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     float: left;
 }
 
