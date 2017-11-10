@@ -39,11 +39,11 @@
                <?php
                 
                 foreach ( $project -> additional_fields['images'] as $img ) {
-                            echo    '<div class="one-thumbnail">
-                                    <a href="#"><img src="' . $img['image']['sizes']['medium'] . '" alt="'  . $img['image']['alt'] .'"></a>
-                                    </div>'; 
+                            echo    '<a href="' . $img['image']['sizes']['large'] . '">
+                                        <div class="one-thumbnail" style="background-image: url(' . $img['image']['sizes']['medium'] . ')">
+                                        </div>
+                                    </a>'; 
                         }
-                
                 ?>
                
                <!-- For some reason this code did not work for me

@@ -703,18 +703,13 @@ PAGE: SINGLE ARTIST - OK
 
 /***********************************
 
-PAGE: SINGLE PROJECT - OK
+PAGE: SINGLE PROJECT
 
 ***********************************/
 
 .project-sidebar {
     width: 32%;
     float: left;
-}
-
-.project-content-container {
-    width: 60%;
-    float: right;
 }
 
 .project-sidebar h2, .project-sidebar h3, .project-sidebar h4 {
@@ -744,8 +739,16 @@ PAGE: SINGLE PROJECT - OK
 
 /***** FOR PHOTOGRAPHS *****/
 
+.project-content-container {
+    width: 60%;
+    float: right;
+}
+
 .one-thumbnail {
-    width: 33.333333%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
     float: left;
 }
 
