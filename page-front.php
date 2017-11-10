@@ -29,7 +29,7 @@
         <div class="home-intro-text">
             <p class="intro-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan nulla tellus, vel lacinia neque condimentum ut. Integer malesuada ornare augue, tempor efficitur est consectetur id. Sed egestas, enim ac tempor tempor, neque lorem cursus massa, non tincidunt arcu sapien vel neque.</p>
             <div class="home-button">
-                <p><a href="#">Our Mission</a></p>
+                <p><a href="<?php echo site_url(); ?>/about/">Our Mission</a></p>
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@
         </div>
         
         <div class="home-button">
-            <p><a href="#">Browse All</a></p>
+            <p><a href="<?php echo site_url(); ?>/project/">Browse All</a></p>
         </div>
     </div>
     
