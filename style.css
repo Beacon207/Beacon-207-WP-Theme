@@ -737,6 +737,7 @@ PAGE: SINGLE PROJECT
     color: #878787;
 }
 
+
 /***** FOR PHOTOGRAPHS *****/
 
 .project-content-container {
@@ -756,6 +757,28 @@ PAGE: SINGLE PROJECT
     max-width: 100%;
     display: block;
 }
+
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+}
+
+#overlay img {
+    margin-top: 10%;
+}
+
+#overlay p {
+    color: #fff;
+}
+
+
+
 
 /***** FOR VIDEO *****/
 

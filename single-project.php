@@ -39,12 +39,13 @@
                <?php
                 
                 foreach ( $project -> additional_fields['images'] as $img ) {
-                            echo    '<a href="' . $img['image']['sizes']['large'] . '">
-                                        <div class="one-thumbnail" style="background-image: url(' . $img['image']['sizes']['medium'] . ')">
+                            echo    '<a href="' . $img['image']['sizes']['large'] . '"' . 'data-lightbox="gallery1"' . '>
+                                        <div class="one-thumbnail" style="background-image: url(' . $img['image']['sizes']['thumbnail'] . ')">
                                         </div>
                                     </a>'; 
                         }
                 ?>
+                
                
                <!-- For some reason this code did not work for me
                Trying to get this to print ONLY with the photography type -->

@@ -9,14 +9,19 @@
 		<!-- LOAD CSS -->
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/normalize.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+		
+		<!-- GET THE PLUGIN CSS -->
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/lightbox2-master/dist/css/lightbox.css">
 
 		<!-- PAGE META TITLE / DESCRIPTION -->
 		<title><?php echo get_bloginfo('name'); ?> | <?php echo get_the_title(); ?></title>
 		<meta name="description" content="Welcome to Beacon Media..." />
-
+		
 		<?php wp_head(); ?>
-
+		
+		<!-- GET THE PLUGIN JS -->
+        <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/lightbox2-master/dist/js/lightbox.js"></script>
 	</head>
 	<body>
 
