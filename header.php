@@ -20,6 +20,15 @@
 		
 		<?php wp_head(); ?>
 		
+		<!--- NO CONFLICT MODE?? -->
+		<script>
+            $.noConflict();
+            jQuery( document ).ready(function( $ ) {
+              // Code that uses jQuery's $ can follow here.
+            });
+            // Code that uses other library's $ can follow here.
+        </script>
+		
 		<!-- GET THE PLUGIN JS -->
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/lightbox2-master/dist/js/lightbox.js"></script>
 	</head>
