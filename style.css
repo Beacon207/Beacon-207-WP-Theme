@@ -741,7 +741,8 @@ PAGE: SINGLE PROJECT
 /***** FOR PHOTOGRAPHS *****/
 
 .project-content-container {
-    width: 65%;
+    max-width: 625px;
+    width: 68%;
     float: right;
 }
 
@@ -842,4 +843,94 @@ footer {
 .social img {
     max-width: 100%;
 }
+
+
+
+
+
+
+
+/***********************************
+
+MEDIA QUERIES
+
+***********************************/
+
+
+
+/***********************************
+
+MEDIA QUERY BREAKPOINT: 850px
+
+***********************************/
+
+@media screen and (max-width: 850px) {
+    
+    /****** SINGLE ARTIST *****/
+    .single-artist-sidebar {
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+    
+    .single-artist-more {
+        width: 75%;
+        margin: 75px auto;
+        float: none;
+    }
+    
+    
+    /****** SINGLE PROJECT *****/
+    .project-sidebar {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        float: none;
+    }
+    
+    .project-content-container {
+        width: 80%;
+        margin: 75px auto;
+        float: none;
+        text-align: center;
+    }
+    
+    .one-thumbnail {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /****** ARCHIVE ARTIST *****/
+    .one-artist {
+        width: 30%;
+        margin: 0 1.6666666666666% 40px;
+        font-size: .9em;
+    }
+    
+    
+    /****** ARCHIVE PROJECT *****/
+    .archive-project-list {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .single-project-container {
+        width: 33.333333333%;
+    }
+    
+    .overlay-text {
+        font-size: 14px;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
 
