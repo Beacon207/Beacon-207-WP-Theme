@@ -436,7 +436,7 @@ PAGE: CONTACT
 
 .wpcf7 p input, .wpcf7 select, textarea {
     border: .5px solid #e2e2e2;
-    background-color: #f4f4f4;
+    background-color: #dddddd;
     height: 30px;
     margin: 5px 0 15px;
     outline: none;
@@ -455,6 +455,10 @@ textarea {
     color: #f4f4f4;
     border-radius: 2px;
     width: auto;
+}
+
+#inner-page span a {
+    color: #000;
 }
 
 /****** STYLING THE ADDRESS ***********/
@@ -865,6 +869,23 @@ MEDIA QUERY BREAKPOINT: 850px
 ***********************************/
 
 @media screen and (max-width: 850px) {
+    
+    /****** STATIC PAGES *****/
+    
+    /****** OUR MISSION *****/
+    #main-mission {
+        display: inline;
+    }
+    
+    .mission-col {
+        width: 100%;
+    }
+    
+    
+    /****** CONTACT FORM *****/
+    .wpcf7 {
+        width: 80%;
+    }
     
     /****** SINGLE ARTIST *****/
     .single-artist-sidebar {
