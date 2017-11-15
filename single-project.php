@@ -37,30 +37,19 @@
             <div class="project-content-container">
                
                <?php
-                
-                foreach ( $project -> additional_fields['images'] as $img ) {
-                            echo    '<a href="' . $img['image']['sizes']['large'] . '"' . 'data-lightbox="gallery1"' . '>
-                                        <div class="one-thumbnail" style="background-image: url(' . $img['image']['sizes']['thumbnail'] . ')">
-                                        </div>
+                    if ($project -> additional_fields['type'] == "Photography") {
+                    
+                        foreach ( $project -> additional_fields['images'] as $img ) {
+                            echo    '<a href="' . $img['image']['sizes']['large'] . '" data-lightbox="gallery1">
+                                        <img class="one-thumbnail" src="' . $img['image']['sizes']['thumbnail'] . '" />
                                     </a>'; 
                         }
+                    } 
+                    else if ($project -> additional_fields['type'] == "Video") {
+                        echo "video goes here"; 
+                    }
                 ?>
-                
-               
-               <!-- For some reason this code did not work for me
-               Trying to get this to print ONLY with the photography type -->
-                <?php
-                    //if ($project -> additional_fields['type'] == "Photography") {
 
-                        //foreach ( $project -> additional_fields['images'] as $img ) {
-                            //echo    '<div class="one-thumbnail">
-                                    //<a href="#"><img src="' . $img['image']['sizes']['medium'] . '" alt="'  . $img['image']['alt'] .'"></a>
-                                    //</div>'; 
-                        //}
-                    //} else if ($project -> additional_fields['type'] == "Video") {
-                        //echo "video goes here"; 
-                    //}
-                ?>
             </div>
         
         <!-- END single-project-main -->

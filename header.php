@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
@@ -11,26 +10,18 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 		
-		<!-- GET THE PLUGIN CSS -->
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/lightbox2-master/dist/css/lightbox.css">
-
+		
 		<!-- PAGE META TITLE / DESCRIPTION -->
 		<title><?php echo get_bloginfo('name'); ?> | <?php echo get_the_title(); ?></title>
 		<meta name="description" content="Welcome to Beacon Media..." />
 		
 		<?php wp_head(); ?>
 		
-		<!--- NO CONFLICT MODE?? -->
-		<script>
-            $.noConflict();
-            jQuery( document ).ready(function( $ ) {
-              // Code that uses jQuery's $ can follow here.
-            });
-            // Code that uses other library's $ can follow here.
-        </script>
 		
-		<!-- GET THE PLUGIN JS -->
-        <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/lightbox2-master/dist/js/lightbox.js"></script>
+		
+		<!-- LIGHTBOX PLUGIN - http://lokeshdhakar.com/projects/lightbox2/ -->
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/lightbox/css/lightbox.css">
+        <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/lightbox/js/lightbox-plus-jquery.min.js"></script>
 	</head>
 	<body>
 
