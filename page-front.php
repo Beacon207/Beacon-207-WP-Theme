@@ -14,15 +14,33 @@
 <!-- MAIN -->
 <main class="home-wrap">
    
-    <div class="home-featured" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/example/sample_stock4.jpeg');">
+    <!--<div class="home-featured" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/example/sample_stock4.jpeg');">
         <div class="home-button feature-button"><a href="#">
             <p>From "Title of Collection"</p>
             <p>John Doe</p>
         </a></div>   
+    </div>-->
+    
+    <div class="home-featured"
+        <?php
+            foreach($projects as $project) {
+                extract((array) $project);
+                if ($additional_fields[feature_on_homepage] == 1) {
+                    echo 'style="background-image: url(' . $featured_image['large'] . ')"  ';
+            ?>
+    >
+            <?php
+                    echo '<div class="home-button feature-button"><a href="' . $guid . '">
+                        <p>' . $post_title . '</p>
+                        <p>' . $artist -> first_name . " " . $artist -> last_name . '</p>
+                        </a></div>';
+                }
+            }
+        ?>
     </div>
     
     <div class="tagline">
-        <h1>Innovate<br><span>&amp;</span><br>Collaborate</h1>
+        <h1>Innovate<br><span>&amp;</span><br>Collaborate</h1>   
     </div>
     
     <div class="home-intro" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/example/sample_stock4.jpeg');">
