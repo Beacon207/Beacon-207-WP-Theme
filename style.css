@@ -155,7 +155,7 @@ HOME PAGE: BUTTONS
 }
 
 .home-button:hover {
-    background-color: #444;
+    background-color: rgba(68, 68, 68, .9)
 }
 
 
@@ -194,8 +194,8 @@ HOME PAGE: TAGLINE
     font-size: 1.25em;
     margin: 100px auto;
     display: inline-block;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
 }
 
 
@@ -208,6 +208,7 @@ HOME PAGE: INTRODUCTION
 
 .home-intro {
     padding: 120px 0;
+    background-color: #f4f4f4;
 }
 
 .home-intro-text {

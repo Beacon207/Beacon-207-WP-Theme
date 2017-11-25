@@ -43,7 +43,7 @@
         <h1>Innovate<br><span>&amp;</span><br>Collaborate</h1>   
     </div>
     
-    <div class="home-intro" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/example/sample_stock4.jpeg');">
+    <div class="home-intro">
         <div class="home-intro-text">
             <p class="intro-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan nulla tellus, vel lacinia neque condimentum ut. Integer malesuada ornare augue, tempor efficitur est consectetur id. Sed egestas, enim ac tempor tempor, neque lorem cursus massa, non tincidunt arcu sapien vel neque.</p>
             <div class="home-button">
