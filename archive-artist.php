@@ -33,7 +33,7 @@
             <div class="archive-main">
                 <div class="archive-head">
                     <h2>Browse Artists</h2>
-                    <p>sorted alphabetically by last name</p>
+                    <p>Sorted alphabetically by last name</p>
                 </div>
                 <div class="archive-artist-list">     
                     <?php 

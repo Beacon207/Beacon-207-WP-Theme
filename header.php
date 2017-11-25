@@ -30,13 +30,8 @@
 
 				<!-- HEADER -->
 		    <header>
-		        <div id="header-main">
-		            <div id="header-logo">
-		                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/beacon_media_logo.png" alt="Beacon Media Lighthouse Logo">
-		            </div>
-		            <div id="header-text">
-		                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/beacon_media_text.png" alt="Beacon Media">
-		            </div>
+		        <div class="header-logo">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/beacon_207_test.png" alt="Beacon Media Lighthouse Logo">
 		        </div>
 
         	  	<nav role="navigation"  id="nav-primary">

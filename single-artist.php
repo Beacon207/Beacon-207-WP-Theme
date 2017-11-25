@@ -23,12 +23,18 @@
 	<div id="inner-page">
           
         <div class="single-artist-main">
+          
+            <div class="archive-head">
+                <h2>Artist Biography</h2>
+            </div>
            
             <div class="single-artist-head">
                 <h2><span class="artist-first-name"><?php echo $first_name; ?></span> <?php echo $last_name; ?></h2>
                 <p><?php echo $preferred_medium; ?></p>
                 <p><?php echo $location; ?></p>
             </div>
+            
+
             
             <div class="single-artist-sidebar">
                 <div class="single-artist-headshot">

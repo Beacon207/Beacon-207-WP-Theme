@@ -33,6 +33,29 @@ a, a:visited, a:active {
     text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    letter-spacing: 4px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /******** BROWSE BUTTONS CLEAR ********/
 
 .single-artist-main, .single-project-main, .archive-main {
@@ -43,45 +66,42 @@ a, a:visited, a:active {
 
 /***********************************
 
-HEADER
+HEADER: LOGO
 
 ***********************************/
 
 header {
     background-color: #000;
     padding: 1em;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    height: 125px;
+}
+
+.header-logo {
+    width: 30%;
+    float: left;
+}
+
+.header-logo img {
+    max-width: 340px;
 }
 
 header a {
     color: #fff;
 }
 
-#header-main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-}
-
-#header-logo img {
-    width: 100px;
-    margin-right: 20px;
-}
-
-#header-text img {
-    width: 240px;
-}
-
 
 
 /***********************************
 
-NAVIGATION
+HEADER: NAVIGATION
 
 ***********************************/
 
+nav {
+    width: 65%;
+    float: right;
+    margin-top: 85px;
+}
 
 #nav-primary ul{
   list-style: none;
@@ -107,6 +127,7 @@ NAVIGATION
 }
 
 
+
 /***********************************
 
 HOME PAGE: WRAP STYLINGS
@@ -116,12 +137,6 @@ HOME PAGE: WRAP STYLINGS
 .home-wrap {
     text-align: center;
     line-height: 2;
-}
-
-.home-wrap h1, .home-wrap h2 {
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin: 0;
 }
 
 
@@ -144,10 +159,6 @@ HOME PAGE: BUTTONS
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
     min-width: 140px;
-}
-
-.home-button p {
-    margin: 0;
 }
 
 .home-button a {
@@ -342,8 +353,6 @@ PAGE: OUR TEAM
 
 #main-team h1, #main-team h2, #main-team p {
     display: inline-block;
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -494,20 +503,13 @@ ARCHIVE PAGES - ARTISTS AND PROJECTS
 ***********************************/
 
 .archive-head {
-    text-transform: uppercase;
     text-align: center;
-    letter-spacing: 2px;
     margin: 0 auto 100px;
-}
-
-.archive-head h2 {
-    font-size: 2em;
-    margin: 0;
+    font-size: 1.75em;
 }
 
 .archive-head p {
-    margin-top: 1.5em;
-    font-size: .7em;
+    font-size: .5em;
 }
 
 
@@ -532,10 +534,6 @@ PAGE: ARTIST ARCHIVE - OK
     width: 20%;
     margin: 0 2.5% 40px;
     float: left;
-}
-
-.one-artist p {
-    margin: 0;
 }
 
 .one-artist a {
@@ -625,13 +623,6 @@ PAGE: SINGLE ARTIST - OK
 
 ***********************************/
 
-.single-artist-head, .single-artist-main h3, .single-artist-main h4 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-/******** SINGLE ARTIST HEADER ********/
 
 .single-artist-head {
     text-align: center;
@@ -718,11 +709,6 @@ PAGE: SINGLE PROJECT
     float: left;
 }
 
-.project-sidebar h2, .project-sidebar h3, .project-sidebar h4 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
-}
 
 .project-sidebar h2 {
     font-size: 2em;
@@ -783,27 +769,6 @@ PAGE: SINGLE PROJECT
 #overlay p {
     color: #fff;
 }
-
-
-
-
-/***** FOR VIDEO *****/
-
-
-
-
-/*************************
-
-LIGHTBOX WITH JQUERY
-
-*************************/
-
-
-
-
-
-
-
 
 
 

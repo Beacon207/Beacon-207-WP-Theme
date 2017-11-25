@@ -31,7 +31,7 @@
                 <h2><?php echo $project -> post_title; ?></h2>
                 <!-- PROJECT DESCRIPTION -->
                 <p><?php echo $project -> post_content; ?></p>
-                <h4><a href="<?php echo $artist -> permalink; ?>">View Artist Bio</a></h4>
+                <h4><a href="<?php echo $artist -> permalink; ?>">Back To Artist Bio</a></h4>
             </div>
 
             <div class="project-content-container">
