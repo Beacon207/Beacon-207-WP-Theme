@@ -32,12 +32,17 @@
         ?>
     </div>
     
+    <!--
     <div class="tagline">
-        <h1>Innovate<br><span>&amp;</span><br>Collaborate</h1>   
+        <h1>Innovate &amp; Collaborate</h1>   
     </div>
+    -->
     
     <div class="home-intro">
         <div class="home-intro-text">
+           <div class="tagline">
+                <h1>Innovate &amp; Collaborate</h1>   
+            </div>
             <p class="intro-paragraph">Introduction to the website. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan nulla tellus, vel lacinia neque condimentum ut. Integer malesuada ornare augue, tempor efficitur est consectetur id. Sed egestas, enim ac tempor tempor, neque lorem cursus massa, non tincidunt arcu sapien vel neque.</p>
             <div class="browse-button">
                 <p><a href="<?php echo site_url(); ?>/about/">Our Mission</a></p>

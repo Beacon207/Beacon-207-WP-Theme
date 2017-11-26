@@ -31,7 +31,7 @@
 				<!-- HEADER -->
 		    <header>
 		        <div class="header-logo">
-                    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/beacon_207_test.png" alt="Beacon Media Lighthouse Logo"></a>
+                    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/beacon207_2.png" alt="Beacon Media Lighthouse Logo"></a>
 		        </div>
 
         	  	<nav role="navigation">
