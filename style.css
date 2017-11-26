@@ -105,9 +105,12 @@ img {
 
 /***********************************
 
-HEADER: LOGO
+HEADER
 
 ***********************************/
+
+
+/************** LOGO **************/
 
 header {
     background-color: #000;
@@ -123,12 +126,7 @@ header {
 }
 
 
-
-/***********************************
-
-HEADER: NAVIGATION
-
-***********************************/
+/************** NAV **************/
 
 
 nav ul{
@@ -152,7 +150,6 @@ nav li a {
 }
 
 nav li a:hover {
-    /*border-bottom: 2px solid #fff;*/
     color: #aaa;
     -webkit-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
@@ -166,6 +163,7 @@ nav li.current_page_item a {
 nav li.current_page_item a:hover {
     border-bottom: 2px solid #aaa;
 }
+
 
 
 
