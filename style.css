@@ -157,7 +157,8 @@ header {
 .header-logo {
     max-width: 425px;
     min-width: 300px;
-    margin: 8px;
+    margin-top: 8px;
+    margin-left: 8px;
 }
 
 
@@ -319,18 +320,18 @@ HOME PAGE
 }
 
 .featured-works {
-    width: 50%;
+    width: 70%;
     margin: 0 auto 120px;
     display: flex;
     justify-content: space-between;
 }
 
 .home-featured-item {
-    width: 160px;
+    width: 33.333333%;
 }
 
 .home-featured-item img {
-    display: block;
+    display: inline-block;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
