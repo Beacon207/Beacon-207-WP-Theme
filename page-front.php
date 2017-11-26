@@ -43,7 +43,18 @@
            <div class="tagline">
                 <h1>Innovate &amp; Collaborate</h1>   
             </div>
-            <p class="intro-paragraph">Introduction to the website. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan nulla tellus, vel lacinia neque condimentum ut. Integer malesuada ornare augue, tempor efficitur est consectetur id. Sed egestas, enim ac tempor tempor, neque lorem cursus massa, non tincidunt arcu sapien vel neque.</p>
+            <div class="intro-paragraph">
+                
+                <?php the_post(); ?>
+                <!-- If there's an excerpt, output it here -->
+                <?php 
+                    $c = $post -> post_content;
+                    $m = substr($c, 0, strpos($c, "<!--more-->"));
+                    if($m) echo '<p>' . $m . '</p>';  
+                ?>
+                <?php the_content(null, true); ?>
+                
+            </div>
             <div class="browse-button">
                 <p><a href="<?php echo site_url(); ?>/about/">Our Mission</a></p>
             </div>
