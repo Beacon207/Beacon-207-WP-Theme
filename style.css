@@ -170,9 +170,12 @@ nav li.current_page_item a:hover {
 
 /***********************************
 
-HOME PAGE: FEATURED IMAGE
+HOME PAGE
 
 ***********************************/
+
+
+/************** MAIN FEATURED IMAGE **************/
 
 .home-wrap {
     text-align: center;
@@ -194,12 +197,7 @@ HOME PAGE: FEATURED IMAGE
 
 
 
-/***********************************
-
-HOME PAGE: TAGLINE
-
-***********************************/
-
+/************** TAGLINE **************/
 
 .tagline {
     font-size: 1.25em;
@@ -211,11 +209,7 @@ HOME PAGE: TAGLINE
 
 
 
-/***********************************
-
-HOME PAGE: INTRODUCTION
-
-***********************************/
+/************** INTRODUCTION **************/
 
 .home-intro {
     padding: 120px 0;
@@ -235,12 +229,7 @@ HOME PAGE: INTRODUCTION
 
 
 
-
-/***********************************
-
-HOME PAGE: FEATURED WORKS
-
-***********************************/
+/************ SECONDARY FEATURES ************/
 
 .home-featured-secondary {
     padding: 100px 0;
@@ -283,15 +272,6 @@ HOME PAGE: FEATURED WORKS
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
-
-
-
-
-/***********************************
-
-ALL OTHER PAGES: MAIN SECTION
-
-***********************************/
 
 
 
@@ -406,8 +386,9 @@ PAGE: CONTACT
 .wpcf7 p {
     display: flex;
     flex-wrap: wrap;
-    margin: .75em 0;
+    margin: 1em 0 0;
     overflow: hidden;
+    padding: 5px;
 }
 
 .wpcf7 p label {
@@ -422,6 +403,7 @@ PAGE: CONTACT
 .wpcf7 input[type=text], .wpcf7 input[type=email] {
     height: 2em;
     width: 100%;
+    
 }
 
 .wpcf7 textarea {
