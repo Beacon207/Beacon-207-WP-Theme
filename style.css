@@ -16,11 +16,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 
-/***********************************
+
+
+/*************************************************
 
 OVERALL STYLES
 
-***********************************/
+**************************************************/
+
 
 body {
     width: 100%;
@@ -63,7 +66,7 @@ img {
 
 
 
-/*********** PAGES WRAPPER ***********/
+/*********** PAGES WRAPPER *********************/
 
 #inner-page {
     width: 90%;
@@ -71,8 +74,30 @@ img {
 }
 
 
-/*********** BROWSE BUTTONS ***********/
 
+/*********** PAGES HEADLINE ********************/
+
+.inner-head {
+    text-align: center;
+    margin: 0 auto 100px;
+    font-size: 1.75em;
+}
+
+.inner-head p {
+    font-size: .5em;
+    font-style: italic;
+}
+
+.inner-head hr {
+    border: none;
+    height: 2.5px;
+    color: #ccc;
+    background-color: #ccc;
+}
+
+
+
+/*********** BROWSE BUTTONS ********************/
 
 .browse-button {
     display: inline-block;
@@ -101,18 +126,26 @@ img {
     overflow: hidden; /*** CLEAR BROWSE BUTTONS ****/
 }
 
+/** wrapping multiple browse buttons for positioning **/
+.browse-options {
+    display: flex;
+    justify-content: space-between;
+    clear: both;
+    margin-top: 200px;
+}
 
 
 
 
-/***********************************
+
+/*************************************************
 
 HEADER
 
-***********************************/
+**************************************************/
 
 
-/************** LOGO **************/
+/************** LOGO *****************************/
 
 header {
     background-color: #000;
@@ -128,8 +161,8 @@ header {
 }
 
 
-/************** NAV **************/
 
+/************** NAV *******************************/
 
 nav ul{
   list-style: none;
@@ -168,11 +201,45 @@ nav li.current_page_item a:hover {
 
 
 
-/***********************************
+
+
+/*************************************************
+
+FOOTER
+
+**************************************************/
+
+
+footer {
+    background-color: #000;
+    padding: 30px 0;
+}
+
+#social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.social {
+    width: 30px;
+    padding: 0 10px;
+}
+
+.social img {
+    max-width: 100%;
+}
+
+
+
+
+
+/*************************************************
 
 HOME PAGE
 
-***********************************/
+**************************************************/
 
 
 /************** MAIN FEATURED IMAGE **************/
@@ -197,7 +264,7 @@ HOME PAGE
 
 
 
-/************** TAGLINE **************/
+/************** TAGLINE ****************************/
 
 .tagline {
     font-size: 1.25em;
@@ -209,7 +276,7 @@ HOME PAGE
 
 
 
-/************** INTRODUCTION **************/
+/************** INTRODUCTION ************************/
 
 .home-intro {
     padding: 120px 0;
@@ -229,7 +296,7 @@ HOME PAGE
 
 
 
-/************ SECONDARY FEATURES ************/
+/************ SECONDARY FEATURES ********************/
 
 .home-featured-secondary {
     padding: 100px 0;
@@ -277,21 +344,14 @@ HOME PAGE
 
 
 
-/**************************************
-*
-*
-***********  STATIC PAGES  ************
-*
-*
-***************************************/
+/*************************************************
+
+INDEX PAGES
+
+**************************************************/
 
 
-
-/***********************************
-
-PAGE: OUR MISSION
-
-***********************************/
+/************** MISSION / CONTACT WIDTH **********/
 
 .mission, .contact {
     width: 50%;
@@ -301,11 +361,16 @@ PAGE: OUR MISSION
 
 
 
-/***********************************
+/************** OUR MISSON ************************/
 
-PAGE: OUR TEAM
+.mission p {
+    margin-top: 10px;
+}
 
-***********************************/
+
+
+/************** OUR TEAM **************************/
+
 
 #main-team h1, #main-team h2, #main-team p {
     display: inline-block;
@@ -374,14 +439,7 @@ PAGE: OUR TEAM
 
 
 
-/***********************************
-
-PAGE: CONTACT
-
-***********************************/
-
-/****** STYLING THE FORM ***********/
-
+/************** CONTACT ***************************/
 
 .wpcf7 p {
     display: flex;
@@ -421,6 +479,7 @@ PAGE: CONTACT
     letter-spacing: 1.5px;
 }
 
+ /** extra contact div for address **/
 .contact-footer {
     margin-top: 100px;
 }
@@ -429,45 +488,13 @@ PAGE: CONTACT
     color: #000;
 }
 
-/**************************************
-*
-*
-***********  POSTS  ************
-*
-*
-***************************************/
+
 
 
 
 /***********************************
 
-ARCHIVE PAGES - ARTISTS AND PROJECTS
-
-***********************************/
-
-.inner-head {
-    text-align: center;
-    margin: 0 auto 100px;
-    font-size: 1.75em;
-}
-
-.inner-head p {
-    font-size: .5em;
-    font-style: italic;
-}
-
-.inner-head hr {
-    border: none;
-    height: 2.5px;
-    color: #ccc;
-    background-color: #ccc;
-}
-
-
-
-/***********************************
-
-PAGE: ARTIST ARCHIVE - OK
+PAGE: ARTIST ARCHIVE
 
 ***********************************/
 
@@ -491,6 +518,8 @@ PAGE: ARTIST ARCHIVE - OK
     font-weight: bold;
     font-size: 1.1em;
 }
+
+
 
 
 
@@ -560,6 +589,7 @@ PAGE: PROJECT ARCHIVE - OK
 .overlay-text-project {
     font-size: .75em;
 }
+
 
 
 
@@ -649,6 +679,7 @@ PAGE: SINGLE ARTIST - OK
 
 
 
+
 /***********************************
 
 PAGE: SINGLE PROJECT
@@ -720,52 +751,6 @@ PAGE: SINGLE PROJECT
 #overlay p {
     color: #fff;
 }
-
-
-
-
-/***********************************
-
-BROWSING BUTTONS
-
-***********************************/
-
-.browse-options {
-    display: flex;
-    justify-content: space-between;
-    clear: both;
-    margin-top: 200px;
-}
-
-
-
-/***********************************
-
-FOOTER
-
-***********************************/
-
-footer {
-    background-color: #000;
-    padding: 30px 0;
-}
-
-#social-icons {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    margin: 0 auto;
-}
-
-.social {
-    width: 30px;
-    padding: 0 10px;
-}
-
-.social img {
-    max-width: 100%;
-}
-
 
 
 
