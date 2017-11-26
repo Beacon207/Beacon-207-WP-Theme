@@ -14,6 +14,8 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+
+
 /***********************************
 
 OVERALL STYLES
@@ -166,29 +168,15 @@ nav li.current_page_item a:hover {
 
 
 
-
 /***********************************
 
-HOME PAGE: WRAP STYLINGS
+HOME PAGE: FEATURED IMAGE
 
 ***********************************/
 
 .home-wrap {
     text-align: center;
 }
-
-
-
-
-
-
-
-
-/***********************************
-
-HOME PAGE: FEATURED IMAGE
-
-***********************************/
 
 .home-featured {
     background-size: cover;
@@ -325,14 +313,10 @@ PAGE: OUR MISSION
 
 ***********************************/
 
-#main-mission {
-    display: flex;
-    justify-content: space-between;
+.mission, .contact {
+    width: 50%;
+    margin: 0 auto;
     font-size: .9em;
-}
-
-.mission-col {
-    width: 45%;
 }
 
 
@@ -349,7 +333,6 @@ PAGE: OUR TEAM
 
 
 #main-team img {
-    max-width: 100%;
     display: block;
 }
 
@@ -419,64 +402,50 @@ PAGE: CONTACT
 
 /****** STYLING THE FORM ***********/
 
-.wpcf7 {
-    width: 45%;
-}
 
 .wpcf7 p {
     display: flex;
     flex-wrap: wrap;
-}
-
-.wpcf7 p label, .wpcf7 p input, .wpcf7 select {
-    width: 100%;
+    margin: .75em 0;
+    overflow: hidden;
 }
 
 .wpcf7 p label {
-    font-weight: bold;
-    font-size: .8em;
+    width: 100%;
 }
 
-.wpcf7 p input, .wpcf7 select, textarea {
-    border: .5px solid #e2e2e2;
-    background-color: #dddddd;
-    height: 30px;
-    margin: 5px 0 15px;
-    outline: none;
-    padding-left: 5px;
+.wpcf7 input, .wpcf7 textarea {
+    background-color: #dbdbdb;
+    border: none;
 }
 
-textarea {
-    height: 120px;
+.wpcf7 input[type=text], .wpcf7 input[type=email] {
+    height: 2em;
+    width: 100%;
+}
+
+.wpcf7 textarea {
     width: 100%;
 }
 
 .wpcf7 .wpcf7-submit {
     border: none;
-    background-color: #262626;
     padding: 8px 12px;
-    color: #f4f4f4;
+    color: #fff;
+    background-color: #000;
     border-radius: 2px;
     width: auto;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-#inner-page span a {
+.contact-footer {
+    margin-top: 100px;
+}
+
+.contact-footer a {
     color: #000;
 }
-
-/****** STYLING THE ADDRESS ***********/
-
-.contact-foot {
-    margin-top: 100px;
-    font-size: 1.2em;
-}
-
-.contact-phone a {
-    color: #262626;
-}
-
-
-
 
 /**************************************
 *
@@ -839,19 +808,8 @@ MEDIA QUERY BREAKPOINT: 850px
     
     /****** STATIC PAGES *****/
     
-    /****** OUR MISSION *****/
-    #main-mission {
-        display: inline;
-    }
-    
-    .mission-col {
-        width: 100%;
-    }
-    
-    
-    /****** CONTACT FORM *****/
-    .wpcf7 {
-        width: 80%;
+    .mission, .contact {
+        width: 85%;
     }
     
     /****** SINGLE ARTIST *****/
@@ -918,7 +876,25 @@ MEDIA QUERY BREAKPOINT: 850px
 
 
 
+/***********************************
 
+MEDIA QUERY BREAKPOINT: 525px
+
+***********************************/
+
+@media screen and (max-width: 525px) {
+    
+    /****** STATIC PAGES *****/
+    
+    .mission, .contact {
+        width: 100%;
+    }
+    
+    .wpcf7 .wpcf7-submit {
+        width: 100%;
+    }
+    
+}
 
 
 
