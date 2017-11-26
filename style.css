@@ -152,6 +152,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    padding: 5px 20px;
 }
 
 .header-logo {
@@ -950,10 +951,6 @@ MEDIA QUERY BREAKPOINT: 350px
         width: 100%;
         padding: 0;
         background-color: #d6d6d6;
-    }
-    
-    .home-featured-secondary {
-        padding-top: 50px;
     }
     
     .latest-works {
