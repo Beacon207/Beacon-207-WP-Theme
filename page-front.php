@@ -56,7 +56,7 @@
                 
             </div>
             <div class="browse-button">
-                <p><a href="<?php echo site_url(); ?>/about/">Our Mission</a></p>
+                <p><a href="<?php echo site_url(); ?>/our-mission/">Our Mission</a></p>
             </div>
         </div>
     </div>
