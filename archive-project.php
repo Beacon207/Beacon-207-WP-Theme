@@ -24,9 +24,10 @@
     
         <div id="inner-page">
            
-            <div class="archive-main">
-                <div class="archive-head">
+            <div class="inner-main">
+                <div class="inner-head">
                     <h2>Browse Projects</h2>
+                    <hr/>
                     <p>Click to view entire body of work</p>
                 </div> 
 
@@ -53,7 +54,7 @@
             </div>
             
             <div class="browse-options">
-                <div class="home-button">
+                <div class="browse-button">
                     <p><a href="<?php echo site_url(); ?>/artist/">&larr; View All Artists</a></p>
                 </div>
             </div>

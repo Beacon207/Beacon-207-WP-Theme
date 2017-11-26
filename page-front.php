@@ -13,13 +13,6 @@
 
 <!-- MAIN -->
 <main class="home-wrap">
-   
-    <!--<div class="home-featured" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/example/sample_stock4.jpeg');">
-        <div class="home-button feature-button"><a href="#">
-            <p>From "Title of Collection"</p>
-            <p>John Doe</p>
-        </a></div>   
-    </div>-->
     
     <div class="home-featured"
         <?php
@@ -30,7 +23,7 @@
             ?>
     >
             <?php
-                    echo '<div class="home-button feature-button"><a href="' . $guid . '">
+                    echo '<div class="browse-button feature-button"><a href="' . $guid . '">
                         <p>' . $post_title . '</p>
                         <p>' . $artist -> first_name . " " . $artist -> last_name . '</p>
                         </a></div>';
@@ -46,7 +39,7 @@
     <div class="home-intro">
         <div class="home-intro-text">
             <p class="intro-paragraph">Introduction to the website. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan nulla tellus, vel lacinia neque condimentum ut. Integer malesuada ornare augue, tempor efficitur est consectetur id. Sed egestas, enim ac tempor tempor, neque lorem cursus massa, non tincidunt arcu sapien vel neque.</p>
-            <div class="home-button">
+            <div class="browse-button">
                 <p><a href="<?php echo site_url(); ?>/about/">Our Mission</a></p>
             </div>
         </div>
@@ -78,7 +71,7 @@
             
         </div>
         
-        <div class="home-button">
+        <div class="browse-button">
             <p><a href="<?php echo site_url(); ?>/project/">Browse All</a></p>
         </div>
     </div>

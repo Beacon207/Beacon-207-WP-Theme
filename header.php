@@ -34,17 +34,17 @@
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/beacon_207_test.png" alt="Beacon Media Lighthouse Logo">
 		        </div>
 
-        	  	<nav role="navigation"  id="nav-primary">
-        					<?php
+        	  	<nav role="navigation">
+                    <?php
 
-        						// LOTS OF OPTIONS HERE: https://developer.wordpress.org/reference/functions/wp_nav_menu/
-        						wp_nav_menu(array(
-        							'menu_id' => 'nav',
-        							'container_class' => 'header-links cf',         // class of container (should you choose to use it)
-        							'menu' => __( 'Header Links' ),   				// nav name
-        							'theme_location' => 'header-links',             // where it's located in the theme
+                        // LOTS OF OPTIONS HERE: https://developer.wordpress.org/reference/functions/wp_nav_menu/
+                        wp_nav_menu(array(
+                            'menu_id' => 'nav',
+                            'container_class' => 'header-links cf',         // class of container (should you choose to use it)
+                            'menu' => __( 'Header Links' ),   				// nav name
+                            'theme_location' => 'header-links',             // where it's located in the theme
 
-        						));
-        					?>
-        				</nav>
+                        ));
+                    ?>
+                </nav>
 		    </header>

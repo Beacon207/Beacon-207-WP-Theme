@@ -27,6 +27,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    line-height: 2;
 }
 
 a, a:visited, a:active {
@@ -54,100 +55,24 @@ p {
     padding: 0;
 }
 
-
-
-/******** BROWSE BUTTONS CLEAR ********/
-
-.single-artist-main, .single-project-main, .archive-main {
-    overflow: hidden;
+img {
+    max-width: 100%;
 }
 
 
 
-/***********************************
+/*********** PAGES WRAPPER ***********/
 
-HEADER: LOGO
-
-***********************************/
-
-header {
-    background-color: #000;
-    padding: 1em;
-    height: 125px;
-}
-
-.header-logo {
-    width: 30%;
-    float: left;
-}
-
-.header-logo img {
-    max-width: 340px;
-}
-
-header a {
-    color: #fff;
+#inner-page {
+    width: 90%;
+    margin: 100px auto 250px;
 }
 
 
-
-/***********************************
-
-HEADER: NAVIGATION
-
-***********************************/
-
-nav {
-    width: 65%;
-    float: right;
-    margin-top: 85px;
-}
-
-#nav-primary ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-around;
-  text-transform: uppercase;
-}
-
-#nav-primary li {
-    padding: 8px 10px;
-    margin: 0 10px;
-    font-size: .9em;
-}
-
-#nav-primary li a:hover {
-    border-bottom: 2px solid #fff;
-}
-
-#nav-primary li.current_page_item a {
-    border-bottom: 2px solid #fff;
-}
+/*********** BROWSE BUTTONS ***********/
 
 
-
-/***********************************
-
-HOME PAGE: WRAP STYLINGS
-
-***********************************/
-
-.home-wrap {
-    text-align: center;
-    line-height: 2;
-}
-
-
-
-/***********************************
-
-HOME PAGE: BUTTONS
-
-***********************************/
-
-.home-button {
+.browse-button {
     display: inline-block;
     text-transform: uppercase;
     font-size: .8em;
@@ -161,13 +86,102 @@ HOME PAGE: BUTTONS
     min-width: 140px;
 }
 
-.home-button a {
+.browse-button a {
     color: #fff;
 }
 
-.home-button:hover {
+.browse-button:hover {
     background-color: rgba(68, 68, 68, .9)
 }
+
+
+.single-artist-main, .single-project-main, .inner-main {
+    overflow: hidden; /*** CLEAR BROWSE BUTTONS ****/
+}
+
+
+
+
+
+/***********************************
+
+HEADER: LOGO
+
+***********************************/
+
+header {
+    background-color: #000;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.header-logo {
+    max-width: 425px;
+    min-width: 300px;
+}
+
+
+
+/***********************************
+
+HEADER: NAVIGATION
+
+***********************************/
+
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+nav li {
+    padding: 8px 10px;
+    margin: 0 10px;
+    font-size: .9em;
+    letter-spacing: 1.5px;
+}
+
+nav li a {
+    color: #fff;
+}
+
+nav li a:hover {
+    /*border-bottom: 2px solid #fff;*/
+    color: #aaa;
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+nav li.current_page_item a {
+    border-bottom: 2px solid #fff;
+}
+
+nav li.current_page_item a:hover {
+    border-bottom: 2px solid #aaa;
+}
+
+
+
+/***********************************
+
+HOME PAGE: WRAP STYLINGS
+
+***********************************/
+
+.home-wrap {
+    text-align: center;
+}
+
+
+
+
 
 
 
@@ -219,7 +233,7 @@ HOME PAGE: INTRODUCTION
 
 .home-intro {
     padding: 120px 0;
-    background-color: #f4f4f4;
+    background-color: #d6d6d6;
 }
 
 .home-intro-text {
@@ -273,7 +287,6 @@ HOME PAGE: FEATURED WORKS
 }
 
 .home-featured-item img {
-    max-width: 100%;
     display: block;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -294,26 +307,7 @@ ALL OTHER PAGES: MAIN SECTION
 
 ***********************************/
 
-#inner-page {
-    width: 90%;
-    margin: 100px auto 250px;
-    line-height: 1.5;
-}
 
-/**** FOR STATIC PAGES: SUB HEADER *****/
-
-#inner-head {
-    margin-bottom: 50px;
-}
-
-#inner-head h1 {
-    font-size: 2.5em;
-}
-
-#inner-tagline {
-    font-weight: bold;
-    width: 75%;
-}
 
 
 
@@ -502,14 +496,22 @@ ARCHIVE PAGES - ARTISTS AND PROJECTS
 
 ***********************************/
 
-.archive-head {
+.inner-head {
     text-align: center;
     margin: 0 auto 100px;
     font-size: 1.75em;
 }
 
-.archive-head p {
+.inner-head p {
     font-size: .5em;
+    font-style: italic;
+}
+
+.inner-head hr {
+    border: none;
+    height: 2.5px;
+    color: #ccc;
+    background-color: #ccc;
 }
 
 
@@ -524,10 +526,6 @@ PAGE: ARTIST ARCHIVE - OK
 .archive-artist-list {
     text-transform: uppercase;
     text-align: center;
-}
-
-.archive-main img {
-    max-width: 100%;
 }
 
 .one-artist {
@@ -623,6 +621,9 @@ PAGE: SINGLE ARTIST - OK
 
 ***********************************/
 
+.down-arrow {
+    margin-top: 50px;
+}
 
 .single-artist-head {
     text-align: center;
@@ -630,11 +631,12 @@ PAGE: SINGLE ARTIST - OK
 }
 
 .single-artist-head h2 {
-    font-size: 3em;
+    font-size: 2em;
     display: inline-block;
     padding: .5em 0;
-    border-top: 5px solid #222;
-    border-bottom: 5px solid #222;
+    border-top: 4px solid #515151;
+    border-bottom: 4px solid #515151;
+    margin-top: -40px;
     margin-bottom: .5em;
 }
 

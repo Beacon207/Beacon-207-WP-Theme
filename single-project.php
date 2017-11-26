@@ -56,10 +56,10 @@
         </div>
         
         <div class="browse-options">
-            <div class="home-button">
+            <div class="browse-button">
                 <p><a href="<?php echo site_url(); ?>/project/">&larr; View all projects</a></p>
             </div>
-            <div class="home-button">
+            <div class="browse-button">
                 <p><a href="<?php echo site_url(); ?>/artist/">View all artists &rarr;</a></p>
             </div>
         </div>

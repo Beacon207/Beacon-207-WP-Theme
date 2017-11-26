@@ -30,11 +30,13 @@
     
         <div id="inner-page">
              
-            <div class="archive-main">
-                <div class="archive-head">
+            <div class="inner-main">
+                <div class="inner-head">
                     <h2>Browse Artists</h2>
+                    <hr/>
                     <p>Sorted alphabetically by last name</p>
                 </div>
+                
                 <div class="archive-artist-list">     
                     <?php 
                         foreach($artists as $artist){
@@ -53,7 +55,7 @@
             </div>
         
             <div class="browse-options">
-                <div class="home-button">
+                <div class="browse-button">
                     <p><a href="<?php echo site_url(); ?>/project/">&larr; View All Projects</a></p>
                 </div>
             </div>

@@ -26,6 +26,7 @@
           
             <div class="archive-head">
                 <h2>Artist Biography</h2>
+                <hr/>
             </div>
            
             <div class="single-artist-head">
@@ -79,7 +80,7 @@
         </div>
             
         <div class="browse-options">
-            <div class="home-button">
+            <div class="browse-button">
                 <p><a href="<?php echo site_url(); ?>/artist/">&larr; View all artists</a></p>
             </div>
         </div>

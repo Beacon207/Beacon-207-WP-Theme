@@ -21,14 +21,15 @@
 	<?php the_post(); ?>
      
     <div id="inner-page">
-        <div id="inner-head">
-            <h1><?php echo $post -> post_title; ?></h1>
+        <div class="inner-head">
+            <h2><?php echo $post -> post_title; ?></h2>
+            <hr/>
             
             <!-- If there's an excerpt, output it here -->
             <?php 
                 $c = $post -> post_content;
                 $m = substr($c, 0, strpos($c, "<!--more-->"));
-                if($m) echo '<p id="inner-tagline">' . $m . '</p>';  
+                if($m) echo '<p>' . $m . '</p>';  
             ?>
         </div>
         
