@@ -1,19 +1,5 @@
 <?php
 
-
-	// reassign images - script block
-	global $wpdb;
-
-	$sql = 'SELECT * FROM ' . $wpdb -> postmeta . ' where meta_key="artist"';
-	$hash = $wpdb -> get_results($sql);
-
-	foreach($hash as $h){
-		extract((array) $h);
-		$wpdb -> update($wpdb -> postmeta, array("post_id" => $meta_value), array("post_id" => $post_id));
-	}
-
-
-
 	//	Got any functions or other server-side scripts unique to this theme?
 
 	//  Put 'em here!!!

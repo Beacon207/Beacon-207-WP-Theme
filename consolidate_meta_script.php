@@ -1,5 +1,7 @@
 <?php
 	
+	// Multiple ways to run this, but try copying and pasting this code into functions.php
+
 	include('../../../wp-load.php');
 	global $wpdb;
 
