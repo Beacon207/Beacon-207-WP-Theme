@@ -247,9 +247,9 @@
 		'location' => array (
 			array (
 				array (
-					'param' => 'page',
+					'param' => 'page_template',
 					'operator' => '==',
-					'value' => '2',
+					'value' => 'page-front.php',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
