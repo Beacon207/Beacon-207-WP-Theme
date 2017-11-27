@@ -619,7 +619,6 @@ PAGE: SINGLE ARTIST - OK
     padding: .5em 0;
     border-top: 4px solid #515151;
     border-bottom: 4px solid #515151;
-    margin-top: -40px;
     margin-bottom: .5em;
 }
 
@@ -636,10 +635,13 @@ PAGE: SINGLE ARTIST - OK
 .single-artist-sidebar {
     width: 25%;
     float: left;
+    text-align: center;
 }
 
 .single-artist-sidebar h4 {
-    margin: 2em 0 .5em;
+    margin: 0;
+    font-weight: bold;
+    font-size: 13px;
 }
 
 .single-artist-sidebar ul {
@@ -657,7 +659,12 @@ PAGE: SINGLE ARTIST - OK
 }
 
 .single-artist-headshot img {
-    max-width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.artist-website {
+    font-size: 13px;
 }
 
 

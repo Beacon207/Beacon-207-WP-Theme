@@ -1,0 +1,10 @@
+
+
+TO DO
+--
+- Overhaul Artist Template
+	X Remove "ARTIST BIOGRAPHY" header line.
+	X Move artist title block to sidebar.
+	X Remove links to "Browse Artist Collections."
+	X Add photo gallery to main column.
+	- Add support for YouTube videos.

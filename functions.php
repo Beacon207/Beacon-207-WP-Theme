@@ -34,14 +34,14 @@
 		$post -> permalink = get_permalink($post -> ID);
 
 		// this gets ALL the project data for each artist, could be stripped down if need be
-		if($getPosts){
-			$post -> projects = array();
-			$sql = 'SELECT post_id FROM ' . $wpdb -> postmeta . ' where meta_key="artist" and meta_value="' . $post -> ID . '"';
-			$projectIds = $wpdb->get_col($sql);
-			foreach ($projectIds as $id) {
-				$post -> projects[] = get_project(get_post($id), false);
-			}
-		}
+		// if($getPosts){
+		// 	$post -> projects = array();
+		// 	$sql = 'SELECT post_id FROM ' . $wpdb -> postmeta . ' where meta_key="artist" and meta_value="' . $post -> ID . '"';
+		// 	$projectIds = $wpdb->get_col($sql);
+		// 	foreach ($projectIds as $id) {
+		// 		$post -> projects[] = get_project(get_post($id), false);
+		// 	}
+		// }
 
 		return $post;
 	}
@@ -66,34 +66,34 @@
 
 
 	// GET PROJECT
-	function get_project($post, $getFull = true){
+	// function get_project($post, $getFull = true){
 		
-		$post -> featured_image = get_image_paths($post -> ID);
+	// 	$post -> featured_image = get_image_paths($post -> ID);
 
-		$post -> content_filtered = apply_filters('the_content', $post -> post_content);
+	// 	$post -> content_filtered = apply_filters('the_content', $post -> post_content);
 
-		$post -> additional_fields = get_fields($post -> ID);
+	// 	$post -> additional_fields = get_fields($post -> ID);
 
-		$post -> artist = get_artist($post -> additional_fields['artist'], $getFull);
-		unset($post -> additional_fields['artist']);
+	// 	$post -> artist = get_artist($post -> additional_fields['artist'], $getFull);
+	// 	unset($post -> additional_fields['artist']);
 		
 
-		return $post;
-	}
+	// 	return $post;
+	// }
 
 
-	// GET PROJECT LIST
-	function get_project_list(){
-		global $wpdb;
-		$projects = array();
-		$sql = 'SELECT * FROM  ' . $wpdb -> posts . '  where post_type="project" and post_status="publish" ORDER BY menu_order';
-		$posts = $wpdb->get_results($sql);
-		foreach ($posts as $post) {
-			$projects[] = get_project($post, false);
-		}
+	// // GET PROJECT LIST
+	// function get_project_list(){
+	// 	global $wpdb;
+	// 	$projects = array();
+	// 	$sql = 'SELECT * FROM  ' . $wpdb -> posts . '  where post_type="project" and post_status="publish" ORDER BY menu_order';
+	// 	$posts = $wpdb->get_results($sql);
+	// 	foreach ($posts as $post) {
+	// 		$projects[] = get_project($post, false);
+	// 	}
 
-		return $projects;
-	}
+	// 	return $projects;
+	// }
 
 
 	// GET IMAGE SIZES
