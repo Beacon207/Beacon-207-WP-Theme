@@ -1,18 +1,13 @@
 <?php
   /* Template Name: FP Template */
 
-    // LOAD DATA FOR THE LIST OF PROJECTS
+    // LOAD DATA FOR THE LIST OF ARTISTS
     $artists = get_artist_list();
-    // echo "<!--";
-    // print_r($projects);
-    // echo "-->";
-
+    
 
     // HOME PAGE CONFIGURATION
     $hp_config = get_fields($post -> ID);
     $featured_artist = get_artist($hp_config["featured_artist"]);
-
-   // print_r($featured_artist);
 
     echo get_header();
 ?>
@@ -25,7 +20,8 @@
     <?php
         extract((array) $featured_artist);
 
-        echo '  <div class="home-featured" style="background-image: url(\'' . $image_paths['large'] . '\')">
+
+        echo '  <div class="home-featured" style="background-image: url(\'' . $hp_config['featured_image']['sizes']['large'] . '\')">
                     <div class="browse-button feature-button">
                         <a href="' . $permalink . '">
                             <p>' . $additional_fields['first_name'] . " " . $additional_fields['last_name'] . '</p>
@@ -91,7 +87,7 @@
         </div>
         
         <div class="browse-button">
-            <p><a href="<?php echo site_url(); ?>/project/">Browse All</a></p>
+            <p><a href="<?php echo site_url(); ?>/artist/">Browse All</a></p>
         </div>
     </div>
     
