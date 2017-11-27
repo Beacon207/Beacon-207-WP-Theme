@@ -5,11 +5,6 @@
  
     // LOAD DATA FOR SELECTED ARTIST
     $artist = get_artist($post);
-    echo "<!--";
-    print_r($artist);
-    echo "-->";
-    
-
     extract( $artist -> additional_fields);
 
     // RENDER THEME HEADER
