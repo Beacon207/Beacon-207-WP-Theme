@@ -2,7 +2,10 @@
   /* Template Name: FP Template */
 
     // LOAD DATA FOR THE LIST OF ARTISTS
-    $artists = get_artist_list();
+    $artists = get_artist_list();    
+    usort($artists, function($a, $b){
+        return $a -> post_date < $b -> post_date;
+    });
     
 
     // HOME PAGE CONFIGURATION
