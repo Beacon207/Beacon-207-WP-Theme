@@ -14,9 +14,9 @@
     });
 
 
-    echo '<!--';
-    print_r($artists);
-    echo '-->';
+    // echo '<!--';
+    // print_r($artists);
+    // echo '-->';
 
     // RENDER THEME HEADER
     echo get_header(); 

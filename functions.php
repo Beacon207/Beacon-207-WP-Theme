@@ -32,6 +32,7 @@
 		$post -> thumbnail = get_the_post_thumbnail($post -> ID, array(200));
 		$post -> content_filtered = apply_filters('the_content', $post -> post_content);
 		$post -> permalink = get_permalink($post -> ID);
+		$post -> image_paths = get_image_paths($post -> ID);
 
 		// this gets ALL the project data for each artist, could be stripped down if need be
 		// if($getPosts){

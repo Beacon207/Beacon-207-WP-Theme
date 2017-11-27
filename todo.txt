@@ -8,3 +8,8 @@ TO DO
 	X Remove links to "Browse Artist Collections."
 	X Add photo gallery to main column.
 	- Add support for YouTube videos.
+
+
+- Other
+	X Links on Artist List page have broken.
+	X Home page has broken.

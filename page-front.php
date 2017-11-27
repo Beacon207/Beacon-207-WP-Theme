@@ -2,10 +2,10 @@
   /* Template Name: FP Template */
 
     // LOAD DATA FOR THE LIST OF PROJECTS
-    $projects = get_project_list();
-    echo "<!--";
-    print_r($projects);
-    echo "-->";
+    $artists = get_artist_list();
+    // echo "<!--";
+    // print_r($projects);
+    // echo "-->";
     
     echo get_header();
 ?>
@@ -74,11 +74,11 @@
             
             <?php
                 $i = 0;
-                foreach($projects as $project) {
-                    extract((array) $project);
+                foreach($artists as $artist) {
+                    extract((array) $artist);
                     if ($i < 3) {
-                        echo '  <div class="home-featured-item"><a href="' . $guid . '">
-                                    <img src="' . $featured_image['medium'] . '" alt="Project image">
+                        echo '  <div class="home-featured-item"><a href="' . $permalink . '">
+                                    <img src="' . $image_paths['medium'] . '" alt="Project image">
                                 </a></div> ';
                         $i++;
                     }
