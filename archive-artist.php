@@ -44,11 +44,7 @@
             <!-- END archive-main -->    
             </div>
         
-            <div class="browse-options">
-                <div class="browse-button">
-                    <p><a href="<?php echo site_url(); ?>/project/">&larr; View All Projects</a></p>
-                </div>
-            </div>
+          
 
         <!-- End inner page -->
         </div>
