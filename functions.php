@@ -111,7 +111,280 @@
         
         
         
-        
+   // UPDATE CUSTOM FIELDS
+	if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_artist-fields',
+		'title' => 'Artist Fields',
+		'fields' => array (
+			array (
+				'key' => 'field_59e3ab0b2b63e',
+				'label' => 'First Name',
+				'name' => 'first_name',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_59e3ab162b63f',
+				'label' => 'Last Name',
+				'name' => 'last_name',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_59e3ab1f2b640',
+				'label' => 'Website',
+				'name' => 'website',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_59e3ab2f2b641',
+				'label' => 'Location',
+				'name' => 'location',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_59e3ab3a2b642',
+				'label' => 'Preferred Medium',
+				'name' => 'preferred_medium',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_59e3ab542b643',
+				'label' => 'Interview',
+				'name' => 'interview',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_59e3ab642b644',
+				'label' => 'Additional Picture',
+				'name' => 'additional_picture',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'artist',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_home-page-configuration',
+		'title' => 'Home Page - Configuration',
+		'fields' => array (
+			array (
+				'key' => 'field_5a1b84abe2c73',
+				'label' => 'Featured Artist',
+				'name' => 'featured_artist',
+				'type' => 'post_object',
+				'post_type' => array (
+					0 => 'artist',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+			array (
+				'key' => 'field_5a1b8c5940ab6',
+				'label' => 'Featured Image',
+				'name' => 'featured_image',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'large',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '2',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_project-fields',
+		'title' => 'Project Fields',
+		'fields' => array (
+			array (
+				'key' => 'field_59e3abd2453e8',
+				'label' => 'YouTube URL',
+				'name' => 'youtube_url',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_59e3ac1f233e4',
+				'label' => 'Images',
+				'name' => 'images',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_59f77c671bd13',
+						'label' => 'Image',
+						'name' => 'image',
+						'type' => 'image',
+						'column_width' => '',
+						'save_format' => 'object',
+						'preview_size' => 'thumbnail',
+						'library' => 'all',
+					),
+					array (
+						'key' => 'field_59f77c771bd14',
+						'label' => 'Caption',
+						'name' => 'caption',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'project',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'artist',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+
+
+
+// UPDATE CUSTOM POST TYPES
+function cptui_register_my_cpts_artist() {
+
+	/**
+	 * Post Type: Arists.
+	 */
+
+	$labels = array(
+		"name" => __( "Arists", "min" ),
+		"singular_name" => __( "Artist", "min" ),
+	);
+
+	$args = array(
+		"label" => __( "Arists", "min" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "artist", "with_front" => true ),
+		"query_var" => true,
+		"supports" => array( "title", "editor", "thumbnail" ),
+	);
+
+	register_post_type( "artist", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_artist' );
+
         
         
         
