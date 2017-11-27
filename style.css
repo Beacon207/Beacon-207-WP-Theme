@@ -252,17 +252,31 @@ HOME PAGE
 }
 
 .home-featured {
+    display: block;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;
     position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
+
+.home-featured:hover .browse-button {
+    background-color: rgba(68, 68, 68, .9)
+}
+
+.browse-button:hover {
+    background-color: rgba(68, 68, 68, .9)
+}
+
 
 .feature-button {
     position: absolute;
     bottom: 0;
     left: 0;
+    color: white;
 }
 
 

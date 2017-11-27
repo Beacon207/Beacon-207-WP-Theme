@@ -8,16 +8,6 @@
     $artists = get_artist_list();
 
 
-    // THE SORT CAN (AND PROBABLY SHOULD) HAPPEN IN THE MODEL, BUT HERE'S WHAT IT LOOKS LIKE
-    usort($artists, function($a, $b){
-        return $a -> additional_fields['first_name'] > $b -> additional_fields['first_name'];
-    });
-
-
-    // echo '<!--';
-    // print_r($artists);
-    // echo '-->';
-
     // RENDER THEME HEADER
     echo get_header(); 
     

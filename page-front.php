@@ -21,13 +21,11 @@
         extract((array) $featured_artist);
 
 
-        echo '  <div class="home-featured" style="background-image: url(\'' . $hp_config['featured_image']['sizes']['large'] . '\')">
+        echo '  <a href="' . $permalink . '" class="home-featured" style="background-image: url(\'' . $hp_config['featured_image']['sizes']['large'] . '\')">
                     <div class="browse-button feature-button">
-                        <a href="' . $permalink . '">
-                            <p>' . $additional_fields['first_name'] . " " . $additional_fields['last_name'] . '</p>
-                        </a>
+                        <p>' . $additional_fields['first_name'] . " " . $additional_fields['last_name'] . '</p>
                     </div>
-                </div>';
+                </a>';
             
     ?>
     
