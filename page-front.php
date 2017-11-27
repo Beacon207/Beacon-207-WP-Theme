@@ -6,7 +6,14 @@
     // echo "<!--";
     // print_r($projects);
     // echo "-->";
-    
+
+
+    // HOME PAGE CONFIGURATION
+    $hp_config = get_fields($post -> ID);
+    $featured_artist = get_artist($hp_config["featured_artist"]);
+
+   // print_r($featured_artist);
+
     echo get_header();
 ?>
 
@@ -14,23 +21,19 @@
 <!-- MAIN -->
 <main class="home-wrap">
     
-    <div class="home-featured"
-        <?php
-            foreach($projects as $project) {
-                extract((array) $project);
-                if ($additional_fields[feature_on_homepage] == 1) {
-                    echo 'style="background-image: url(' . $featured_image['large'] . ')"  ';
-            ?>
-    >
-            <?php
-                    echo '<div class="browse-button feature-button"><a href="' . $guid . '">
-                        <p>' . $post_title . '</p>
-                        <p>' . $artist -> first_name . " " . $artist -> last_name . '</p>
-                        </a></div>';
-                }
-            }
-        ?>
-    </div>
+    
+    <?php
+        extract((array) $featured_artist);
+
+        echo '  <div class="home-featured" style="background-image: url(\'' . $image_paths['large'] . '\')">
+                    <div class="browse-button feature-button">
+                        <a href="' . $permalink . '">
+                            <p>' . $additional_fields['first_name'] . " " . $additional_fields['last_name'] . '</p>
+                        </a>
+                    </div>
+                </div>';
+            
+    ?>
     
     <!--
     <div class="tagline">
