@@ -8,35 +8,12 @@
     });
     
 
-    // HOME PAGE CONFIGURATION
-    $hp_config = get_fields($post -> ID);
-    $featured_artist = get_artist($hp_config["featured_artist"]);
-
     echo get_header();
 ?>
 
 
 <!-- MAIN -->
 <main class="home-wrap">
-    
-    
-    <?php
-        extract((array) $featured_artist);
-
-
-        echo '  <a href="' . $permalink . '" class="home-featured" style="background-image: url(\'' . $hp_config['featured_image']['sizes']['large'] . '\')">
-                    <div class="browse-button feature-button">
-                        <p>' . $additional_fields['first_name'] . " " . $additional_fields['last_name'] . '</p>
-                    </div>
-                </a>';
-            
-    ?>
-    
-    <!--
-    <div class="tagline">
-        <h1>Innovate &amp; Collaborate</h1>   
-    </div>
-    -->
     
     <div class="home-intro">
         <div class="home-intro-text">

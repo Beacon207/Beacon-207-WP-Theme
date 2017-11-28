@@ -34,16 +34,6 @@
 		$post -> permalink = get_permalink($post -> ID);
 		$post -> image_paths = get_image_paths($post -> ID);
 
-		// this gets ALL the project data for each artist, could be stripped down if need be
-		// if($getPosts){
-		// 	$post -> projects = array();
-		// 	$sql = 'SELECT post_id FROM ' . $wpdb -> postmeta . ' where meta_key="artist" and meta_value="' . $post -> ID . '"';
-		// 	$projectIds = $wpdb->get_col($sql);
-		// 	foreach ($projectIds as $id) {
-		// 		$post -> projects[] = get_project(get_post($id), false);
-		// 	}
-		// }
-
 		return $post;
 	}
 
@@ -65,36 +55,6 @@
 		return $artists;
 	}
 
-
-	// GET PROJECT
-	// function get_project($post, $getFull = true){
-		
-	// 	$post -> featured_image = get_image_paths($post -> ID);
-
-	// 	$post -> content_filtered = apply_filters('the_content', $post -> post_content);
-
-	// 	$post -> additional_fields = get_fields($post -> ID);
-
-	// 	$post -> artist = get_artist($post -> additional_fields['artist'], $getFull);
-	// 	unset($post -> additional_fields['artist']);
-		
-
-	// 	return $post;
-	// }
-
-
-	// // GET PROJECT LIST
-	// function get_project_list(){
-	// 	global $wpdb;
-	// 	$projects = array();
-	// 	$sql = 'SELECT * FROM  ' . $wpdb -> posts . '  where post_type="project" and post_status="publish" ORDER BY menu_order';
-	// 	$posts = $wpdb->get_results($sql);
-	// 	foreach ($posts as $post) {
-	// 		$projects[] = get_project($post, false);
-	// 	}
-
-	// 	return $projects;
-	// }
 
 
 	// GET IMAGE SIZES
@@ -189,7 +149,7 @@
 			),
 			array (
 				'key' => 'field_59e3ab642b644',
-				'label' => 'Additional Picture',
+				'label' => 'Head Shot for Artists Page',
 				'name' => 'additional_picture',
 				'type' => 'image',
 				'save_format' => 'object',
@@ -216,53 +176,7 @@
 		),
 		'menu_order' => 0,
 	));
-	register_field_group(array (
-		'id' => 'acf_home-page-configuration',
-		'title' => 'Home Page - Configuration',
-		'fields' => array (
-			array (
-				'key' => 'field_5a1b84abe2c73',
-				'label' => 'Featured Artist',
-				'name' => 'featured_artist',
-				'type' => 'post_object',
-				'post_type' => array (
-					0 => 'artist',
-				),
-				'taxonomy' => array (
-					0 => 'all',
-				),
-				'allow_null' => 0,
-				'multiple' => 0,
-			),
-			array (
-				'key' => 'field_5a1b8c5940ab6',
-				'label' => 'Featured Image',
-				'name' => 'featured_image',
-				'type' => 'image',
-				'save_format' => 'object',
-				'preview_size' => 'large',
-				'library' => 'all',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'page_template',
-					'operator' => '==',
-					'value' => 'page-front.php',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
+	
 	register_field_group(array (
 		'id' => 'acf_project-fields',
 		'title' => 'Project Fields',
