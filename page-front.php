@@ -14,11 +14,17 @@
 
 <!-- MAIN -->
 <main class="home-wrap">
+   
+   <?php
+    
+    echo do_shortcode("[rev_slider slider1]");
+    
+    ?>
     
     <div class="home-intro">
         <div class="home-intro-text">
            <div class="tagline">
-                <h1>Innovate &amp; Collaborate</h1>   
+                <h1>Maine's Creative Collective</h1>   
             </div>
             <div class="intro-paragraph">
                 

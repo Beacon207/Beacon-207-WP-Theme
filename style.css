@@ -251,6 +251,8 @@ HOME PAGE
     text-align: center;
 }
 
+/*
+
 .home-featured {
     display: block;
     background-size: cover;
@@ -271,7 +273,6 @@ HOME PAGE
     background-color: rgba(68, 68, 68, .9)
 }
 
-
 .feature-button {
     position: absolute;
     bottom: 0;
@@ -279,7 +280,7 @@ HOME PAGE
     color: white;
 }
 
-
+*/
 
 /************** TAGLINE ****************************/
 
