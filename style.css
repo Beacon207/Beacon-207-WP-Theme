@@ -710,8 +710,8 @@ PAGE: SINGLE ARTIST - OK
     margin-bottom: 60px;
 }
 
-.artist-interview {
-    text-align: justify;
+.artist-bio p.p2 {
+    margin-bottom: 12px;
 }
 
 
