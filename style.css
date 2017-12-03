@@ -977,6 +977,10 @@ MEDIA QUERY BREAKPOINT: 525px
         font-size: 1.2em;
     }
     
+    .single-artist-more p {
+        font-size: .85em;
+    }
+    
     .single-artist-headshot img {
         width: 75%;
         max-width: 400px;
