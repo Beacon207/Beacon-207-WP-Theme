@@ -167,6 +167,18 @@ header {
 
 /************** NAV *******************************/
 
+div#responsive-menu-container.slide-right {
+    padding-top: 100px;
+    height: 300px;
+    text-transform: uppercase;
+}
+
+button#responsive-menu-button.responsive-menu-button {
+    padding-top: 50px;
+}
+
+
+
 nav ul{
   list-style: none;
   padding: 0;
@@ -784,6 +796,8 @@ PAGE: SINGLE PROJECT
 
 
 
+
+
 /***********************************
 
 MEDIA QUERIES
@@ -799,6 +813,7 @@ MEDIA QUERY BREAKPOINT: 850px
 ***********************************/
 
 @media screen and (max-width: 850px) {
+    
     
     /**** HOME PAGE *****/
     

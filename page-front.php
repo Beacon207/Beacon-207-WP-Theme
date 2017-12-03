@@ -17,7 +17,7 @@
    
    <?php
     
-    echo do_shortcode("[rev_slider slider1]");
+    //echo do_shortcode("[rev_slider slider1]");
     
     ?>
     

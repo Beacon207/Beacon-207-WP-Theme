@@ -24,9 +24,6 @@
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/lightbox/js/lightbox-plus-jquery.min.js"></script>
         
         
-        <!-- Put these into the <head> -->
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/responsive-nav/responsive-nav.css">
-        <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/responsive-nav/responsive-nav.js"></script>
 	</head>
 	<body>
 
@@ -39,7 +36,7 @@
                     <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/beacon207_2.png" alt="Beacon Media Lighthouse Logo"></a>
 		        </div>
 
-        	  	<nav role="navigation" class="nav-collapse">
+        	  	<nav role="navigation">
                     <?php
 
                         // LOTS OF OPTIONS HERE: https://developer.wordpress.org/reference/functions/wp_nav_menu/
