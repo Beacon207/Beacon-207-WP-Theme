@@ -952,6 +952,37 @@ MEDIA QUERY BREAKPOINT: 525px
     
     /****** STATIC PAGES *****/
     
+    .inner-head {
+        margin-bottom: 50px;
+    }
+    
+    .inner-head h2 {
+        font-size: 1em;
+    }
+    
+    .inner-head hr {
+        display: none;
+    }
+    
+    
+    /** Artist Archive Page **/
+    
+    .one-artist {
+        width: 45%;
+    }
+    
+    /** Single Artist Page **/
+    
+    .single-artist-more h3 {
+        font-size: 1.2em;
+    }
+    
+    .single-artist-headshot img {
+        width: 75%;
+        max-width: 400px;
+    }
+    
+    
     .mission, .contact {
         width: 100%;
     }
