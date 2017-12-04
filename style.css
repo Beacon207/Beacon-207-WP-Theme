@@ -358,6 +358,16 @@ HOME PAGE
 
 .home-featured-item {
     width: 33.333333%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.home-featured-item p {
+    line-height: 1.5;
+}
+
+.home-featured-item a {
+    color: #000;
 }
 
 .home-featured-item img {
@@ -534,6 +544,7 @@ PAGE: ARTIST ARCHIVE
 .archive-artist-list {
     text-transform: uppercase;
     text-align: center;
+    line-height: 1.5;
 }
 
 .one-artist {

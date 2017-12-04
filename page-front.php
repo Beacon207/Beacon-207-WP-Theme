@@ -61,6 +61,8 @@
                     if ($i < 3) {
                         echo '  <div class="home-featured-item"><a href="' . $permalink . '">
                                     <img src="' . $image_paths['medium'] . '" alt="Project image">
+                                    <p>' . $additional_fields['first_name'] . '</p>
+                                    <p class="one-artist-last">' . $additional_fields['last_name'] . '</p>
                                 </a></div> ';
                         $i++;
                     }
