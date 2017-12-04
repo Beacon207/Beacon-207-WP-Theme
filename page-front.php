@@ -28,12 +28,8 @@
             </div>
             <div class="intro-paragraph">
                 
-                <?php the_post(); ?>
-                <!-- If there's an excerpt, output it here -->
-                <?php 
-                    $c = $post -> post_content;
-                    $m = substr($c, 0, strpos($c, "<!--more-->"));
-                    if($m) echo '<p>' . $m . '</p>';  
+                <?php
+                    the_post();
                 ?>
                 <?php the_content(null, true); ?>
                 
