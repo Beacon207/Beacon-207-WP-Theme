@@ -262,19 +262,21 @@ HOME PAGE
     text-align: center;
 }
 
-/*
+
 
 .home-featured {
-    display: block;
+    /*display: block;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-    position: relative;
+    background-position: center;*/
+    height: 100px;
+    /*position: relative;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease;*/
 }
+
+/*
 
 .home-featured:hover .browse-button {
     background-color: rgba(68, 68, 68, .9)
