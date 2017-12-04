@@ -7,6 +7,9 @@
         return $a -> post_date < $b -> post_date;
     });
     
+    echo "<!--";
+        print_r($artists);
+    echo "-->";
 
     echo get_header();
 ?>
