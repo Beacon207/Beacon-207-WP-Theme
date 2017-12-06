@@ -34,7 +34,7 @@
 
                             echo  '<div class="one-artist">
                                         <a href="' . $artist -> permalink . '">
-                                        <img src="' . $additional_picture['url'] . '">
+                                        <img src="' . $artist -> image_paths['medium'] . '">
                                         <p>' . $first_name . '</p>
                                         <p class="one-artist-last">' . $last_name . '</p></a>
                                     </div>';
