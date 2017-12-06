@@ -64,7 +64,7 @@
                         
                         foreach ($videos as $video) {                            
                             
-                            $video_path = explode("?v=", $video['youtube_vids'])[1];
+                            $video_path = explode("?v=", $video['youtube_url'])[1];
                             $video_id = explode("&", $video_path)[0];
 
                                 if(!$video_id) echo "<h1>Invalid Youtube URL</h1>";
