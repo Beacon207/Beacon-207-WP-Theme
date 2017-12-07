@@ -81,7 +81,7 @@
 
 
                 <div class="artist-bio">
-                    <h3>Bio</h3>
+                    <!--<h3>Bio</h3>-->
                     <div><?php echo $artist -> content_filtered; ?></div>
                 </div>
                 <div class="artist-interview">
