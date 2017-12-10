@@ -176,23 +176,40 @@
 		),
 		'menu_order' => 0,
 	));
-	
+    
+        
+    	
 	register_field_group(array (
 		'id' => 'acf_project-fields',
 		'title' => 'Project Fields',
 		'fields' => array (
+            
 			array (
-				'key' => 'field_59e3abd2453e8',
-				'label' => 'YouTube URL',
-				'name' => 'youtube_url',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
+				'key' => 'field_5a2478888b811',
+				'label' => 'Videos',
+				'name' => 'videos',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5a2478928b812',
+						'label' => 'Youtube URL',
+						'name' => 'youtube_url',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
 			),
+            
 			array (
 				'key' => 'field_59e3ac1f233e4',
 				'label' => 'Images',
@@ -228,6 +245,7 @@
 				'layout' => 'table',
 				'button_label' => 'Add Row',
 			),
+            
 		),
 		'location' => array (
 			array (
