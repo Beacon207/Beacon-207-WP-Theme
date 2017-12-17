@@ -36,6 +36,10 @@
             background-size: 100%;
         }
 
+        #rev_slider_1_1_wrapper {
+            width: 100% !important;
+        }
+
         @media screen and (max-width: 600px) {
             #slideshow_frame {
                 height: 400px;
