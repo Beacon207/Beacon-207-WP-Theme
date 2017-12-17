@@ -71,211 +71,178 @@
         
         
         
-   // UPDATE CUSTOM FIELDS
-	if(function_exists("register_field_group"))
-{
-	register_field_group(array (
-		'id' => 'acf_artist-fields',
-		'title' => 'Artist Fields',
-		'fields' => array (
-			array (
-				'key' => 'field_59e3ab0b2b63e',
-				'label' => 'First Name',
-				'name' => 'first_name',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_59e3ab162b63f',
-				'label' => 'Last Name',
-				'name' => 'last_name',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_59e3ab1f2b640',
-				'label' => 'Website',
-				'name' => 'website',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_59e3ab2f2b641',
-				'label' => 'Location',
-				'name' => 'location',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_59e3ab3a2b642',
-				'label' => 'Preferred Medium',
-				'name' => 'preferred_medium',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_59e3ab542b643',
-				'label' => 'Interview',
-				'name' => 'interview',
-				'type' => 'wysiwyg',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-			array (
-				'key' => 'field_59e3ab642b644',
-				'label' => 'Head Shot for Artists Page',
-				'name' => 'additional_picture',
-				'type' => 'image',
-				'save_format' => 'object',
-				'preview_size' => 'thumbnail',
-				'library' => 'all',
-			),
-		),
-		'location' => array (
-			array (
+   	// IF YOU HAVE ALL THE CUSTOM FIELDS STUFF
+	if(function_exists("register_field_group")) {
+
+
+		// REGISTER A GROUP OF FIELDS
+		register_field_group(array (
+			'id' => 'acf_artist-fields',
+			'title' => 'Artist Fields',
+
+			// TO ADD FIELDS, JUST ADD THEM TO THE "FIELDS" ARRAY...
+			'fields' => array (
 				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'artist',
-					'order_no' => 0,
-					'group_no' => 0,
+					'key' => 'field_59e3ab0b2b63e',
+					'label' => 'First Name',
+					'name' => 'first_name',
+					'type' => 'text',
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'formatting' => 'html',
+					'maxlength' => '',
 				),
+				array (
+					'key' => 'field_59e3ab162b63f',
+					'label' => 'Last Name',
+					'name' => 'last_name',
+					'type' => 'text',
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'formatting' => 'html',
+					'maxlength' => '',
+				),
+				array (
+					'key' => 'field_59e3ab1f2b640',
+					'label' => 'Website',
+					'name' => 'website',
+					'type' => 'text',
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'formatting' => 'html',
+					'maxlength' => '',
+				),
+				array (
+					'key' => 'field_59e3ab2f2b641',
+					'label' => 'Location',
+					'name' => 'location',
+					'type' => 'text',
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'formatting' => 'html',
+					'maxlength' => '',
+				),
+				array (
+					'key' => 'field_59e3ab3a2b642',
+					'label' => 'Preferred Medium',
+					'name' => 'preferred_medium',
+					'type' => 'text',
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'formatting' => 'html',
+					'maxlength' => '',
+				),
+				array (
+					'key' => 'field_59e3ab542b643',
+					'label' => 'Interview',
+					'name' => 'interview',
+					'type' => 'wysiwyg',
+					'default_value' => '',
+					'toolbar' => 'full',
+					'media_upload' => 'yes',
+				),
+				array (
+					'key' => 'field_59e3ab642b644',
+					'label' => 'Head Shot for Artists Page',
+					'name' => 'additional_picture',
+					'type' => 'image',
+					'save_format' => 'object',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+				),
+
+				// HERE'S WHERE I PUT THE NEW FIELDS...
+				array (
+					'key' => 'field_5a2478888b811',
+					'label' => 'Videos',
+					'name' => 'videos',
+					'type' => 'repeater',
+					'sub_fields' => array (
+						array (
+							'key' => 'field_5a2478928b812',
+							'label' => 'Youtube URL',
+							'name' => 'youtube_url',
+							'type' => 'text',
+							'column_width' => '',
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'formatting' => 'html',
+							'maxlength' => '',
+						),
+					),
+					'row_min' => '',
+					'row_limit' => '',
+					'layout' => 'table',
+					'button_label' => 'Add Row',
+				),
+	            array (
+					'key' => 'field_59e3ac1f233e4',
+					'label' => 'Images',
+					'name' => 'images',
+					'type' => 'repeater',
+					'sub_fields' => array (
+						array (
+							'key' => 'field_59f77c671bd13',
+							'label' => 'Image',
+							'name' => 'image',
+							'type' => 'image',
+							'column_width' => '',
+							'save_format' => 'object',
+							'preview_size' => 'thumbnail',
+							'library' => 'all',
+						),
+						array (
+							'key' => 'field_59f77c771bd14',
+							'label' => 'Caption',
+							'name' => 'caption',
+							'type' => 'text',
+							'column_width' => '',
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'formatting' => 'html',
+							'maxlength' => '',
+						),
+					),
+					'row_min' => '',
+					'row_limit' => '',
+					'layout' => 'table',
+					'button_label' => 'Add Row',
+				)
 			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
-    
-        
-    	
-	register_field_group(array (
-		'id' => 'acf_project-fields',
-		'title' => 'Project Fields',
-		'fields' => array (
-            
-			array (
-				'key' => 'field_5a2478888b811',
-				'label' => 'Videos',
-				'name' => 'videos',
-				'type' => 'repeater',
-				'sub_fields' => array (
+			'location' => array (
+				array (
 					array (
-						'key' => 'field_5a2478928b812',
-						'label' => 'Youtube URL',
-						'name' => 'youtube_url',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'formatting' => 'html',
-						'maxlength' => '',
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'artist',
+						'order_no' => 0,
+						'group_no' => 0,
 					),
 				),
-				'row_min' => '',
-				'row_limit' => '',
-				'layout' => 'table',
-				'button_label' => 'Add Row',
 			),
-            
-			array (
-				'key' => 'field_59e3ac1f233e4',
-				'label' => 'Images',
-				'name' => 'images',
-				'type' => 'repeater',
-				'sub_fields' => array (
-					array (
-						'key' => 'field_59f77c671bd13',
-						'label' => 'Image',
-						'name' => 'image',
-						'type' => 'image',
-						'column_width' => '',
-						'save_format' => 'object',
-						'preview_size' => 'thumbnail',
-						'library' => 'all',
-					),
-					array (
-						'key' => 'field_59f77c771bd14',
-						'label' => 'Caption',
-						'name' => 'caption',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'formatting' => 'html',
-						'maxlength' => '',
-					),
-				),
-				'row_min' => '',
-				'row_limit' => '',
-				'layout' => 'table',
-				'button_label' => 'Add Row',
-			),
-            
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'project',
-					'order_no' => 0,
-					'group_no' => 0,
+			'options' => array (
+				'position' => 'normal',
+				'layout' => 'no_box',
+				'hide_on_screen' => array (
 				),
 			),
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'artist',
-					'order_no' => 0,
-					'group_no' => 1,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
-}
+			'menu_order' => 0,
+		));
+	}
 
 
 

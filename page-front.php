@@ -18,11 +18,56 @@
 <!-- MAIN -->
 <main class="home-wrap">
    
-   <?php
-    
-    echo do_shortcode("[rev_slider slider1]");
-    
-    ?>
+
+    <style>
+        #slideshow_wrap {
+            padding: 30px 0;
+            background: black;
+        }
+        #slideshow_frame {
+            height: 600px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .slide {
+            height: 100%;
+            width: 100%;
+            background-position: center center;
+            background-size: 100%;
+        }
+
+        @media screen and (max-width: 600px) {
+            #slideshow_frame {
+                height: 400px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            #slideshow_frame {
+                height: 200px;
+            }
+        }
+
+    </style>
+
+    <script>
+
+    </script>
+
+    <div id="slideshow_wrap">
+
+        <div id="slideshow_frame">
+<!-- 
+            <div class="slide" id="slide_img_1" style="background-image: url('/cmty/beacon media/admin/content/slideshow/1.jpg')"></div>
+            <div class="slide" id="slide_img_2" style="display: none; background-image: url('/cmty/beacon media/admin/content/slideshow/2.jpg')"></div>
+            <div class="slide" id="slide_img_2" style="display: none; background-image: url('/cmty/beacon media/admin/content/slideshow/3.jpg')"></div>
+ -->
+
+            <?php echo do_shortcode("[rev_slider slider1]"); ?>
+
+        </div>
+    </div>
+
     
     <div class="home-intro">
         <div class="home-intro-text">
