@@ -1021,7 +1021,7 @@ MEDIA QUERY BREAKPOINT: 450px
 
 ***********************************/
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     
     .browse-button {
         padding: 8px 10px;
@@ -1030,7 +1030,7 @@ MEDIA QUERY BREAKPOINT: 450px
     /****** HOME PAGE *******/
     
     .home-intro {
-        padding: 10px 0 0;
+        padding: 10px 0 50px;
     }
     
     .home-intro-text {
