@@ -1021,7 +1021,7 @@ MEDIA QUERY BREAKPOINT: 450px
 
 ***********************************/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 450px) {
     
     .browse-button {
         padding: 8px 10px;

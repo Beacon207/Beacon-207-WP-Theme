@@ -70,6 +70,10 @@
             #slideshow_frame {
                 height: 300px;
             }
+            .home-intro {
+                padding: 10px 0 50px;
+            }
+    
         }
 
     </style>
