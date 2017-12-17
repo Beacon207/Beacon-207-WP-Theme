@@ -40,7 +40,7 @@
             height: 100%;
             width: 100%;
             background-position: center center;
-            background-size: 100%;
+            background-size: cover;
             position: absolute;
             top: 0; left: 0;
             display: none;
