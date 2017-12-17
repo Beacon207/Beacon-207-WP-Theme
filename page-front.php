@@ -68,7 +68,7 @@
 
         @media screen and (max-width: 400px) {
             #slideshow_frame {
-                height: 200px;
+                height: 300px;
             }
         }
 
