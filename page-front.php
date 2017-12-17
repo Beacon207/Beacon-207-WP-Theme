@@ -6,11 +6,16 @@
     usort($artists, function($a, $b){
         return $a -> menu_order < $b -> menu_order;
     });
-    
-    echo "<!--";
-        print_r($artists);
-    echo "-->";
 
+
+    // GET SLIDESHOW
+    $meta = get_fields($page -> ID);
+    $slides = array();
+    foreach($meta['slideshow'] as $slide){
+        $slides[] = $slide['image']['sizes']['large'];
+    }
+
+    
     echo get_header();
 ?>
 
@@ -28,19 +33,34 @@
             height: 600px;
             max-width: 1000px;
             margin: auto;
+            position: relative;
         }
+   
         .slide {
             height: 100%;
             width: 100%;
             background-position: center center;
             background-size: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            display: none;
+            z-index: 0;
         }
+
+        .slide:first-child {
+            display: block;
+            z-index: 1;
+        }
+
 
         #rev_slider_1_1_wrapper {
             width: 100% !important;
         }
 
         @media screen and (max-width: 600px) {
+            #slideshow_wrap { 
+                padding-top: 10px;
+            }
             #slideshow_frame {
                 height: 400px;
             }
@@ -55,19 +75,55 @@
     </style>
 
     <script>
+        var img_count = <?php echo count($slides); ?>;
+        var transition = 600;
+        var delay = 3000;
+        var index = 0;
 
+
+        function iterate(){
+
+            // set your DOM pointers
+            var current_slide = $('#slide_img_' + index);
+
+
+            // get next slide
+            index = (index == img_count - 1) ? 0 : index + 1;
+            var next_slide = $('#slide_img_' + index);
+
+
+            // display the next slide (in the back)
+            next_slide.show();
+
+
+            // fade out the top one, and revise layering order
+            current_slide.fadeOut(600, function(){
+                current_slide.css({"z-index" : 0 });
+                next_slide.css({"z-index" : 1 });
+            });
+
+
+            // cue the next transition
+            setTimeout("iterate()", delay);
+
+        }
+
+
+        // kick it off
+        $(function(){
+            setTimeout("iterate()", delay);
+        })
     </script>
 
     <div id="slideshow_wrap">
 
         <div id="slideshow_frame">
-<!-- 
-            <div class="slide" id="slide_img_1" style="background-image: url('/cmty/beacon media/admin/content/slideshow/1.jpg')"></div>
-            <div class="slide" id="slide_img_2" style="display: none; background-image: url('/cmty/beacon media/admin/content/slideshow/2.jpg')"></div>
-            <div class="slide" id="slide_img_2" style="display: none; background-image: url('/cmty/beacon media/admin/content/slideshow/3.jpg')"></div>
- -->
 
-            <?php echo do_shortcode("[rev_slider slider1]"); ?>
+            <?php 
+                foreach($slides as $k => $s){
+                    echo '<div class="slide" id="slide_img_' . $k . '" style="background-image: url(\'' . $s . '\')"></div>';
+                }
+            ?>
 
         </div>
     </div>

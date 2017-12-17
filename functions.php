@@ -242,6 +242,57 @@
 			),
 			'menu_order' => 0,
 		));
+
+
+
+		register_field_group(array (
+			'id' => 'acf_home-page',
+			'title' => 'Home Page',
+			'fields' => array (
+				array (
+					'key' => 'field_5a36cc26c61f3',
+					'label' => 'Slideshow',
+					'name' => 'slideshow',
+					'type' => 'repeater',
+					'sub_fields' => array (
+						array (
+							'key' => 'field_5a36cc3dc61f4',
+							'label' => 'image',
+							'name' => 'image',
+							'type' => 'image',
+							'column_width' => '',
+							'save_format' => 'object',
+							'preview_size' => 'thumbnail',
+							'library' => 'all',
+						),
+					),
+					'row_min' => '',
+					'row_limit' => '',
+					'layout' => 'table',
+					'button_label' => 'Add Row',
+				),
+			),
+			'location' => array (
+				array (
+					array (
+						'param' => 'page_template',
+						'operator' => '==',
+						'value' => 'page-front.php',
+						'order_no' => 0,
+						'group_no' => 0,
+					),
+				),
+			),
+			'options' => array (
+				'position' => 'normal',
+				'layout' => 'no_box',
+				'hide_on_screen' => array (
+				),
+			),
+			'menu_order' => 0,
+		));
+		
+
 	}
 
 
