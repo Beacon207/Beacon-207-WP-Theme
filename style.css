@@ -1030,7 +1030,7 @@ MEDIA QUERY BREAKPOINT: 350px
     /****** HOME PAGE *******/
     
     .home-intro {
-        padding: 50px 0;
+        padding: 10px 0 0;
     }
     
     .home-intro-text {
