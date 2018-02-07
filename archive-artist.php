@@ -23,7 +23,7 @@
             <div class="inner-main">
                 <div class="inner-head">
                     <h2>Browse Artists</h2>
-                    <hr/>
+                    <!--<hr/>-->
                     <p>Sorted alphabetically by last name</p>
                 </div>
                 

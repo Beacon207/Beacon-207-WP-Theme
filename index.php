@@ -23,7 +23,7 @@
     <div id="inner-page">
         <div class="inner-head">
             <h2><?php echo $post -> post_title; ?></h2>
-            <hr/>
+            <!--<hr/>-->
             
             <!-- If there's an excerpt, output it here -->
             <?php 

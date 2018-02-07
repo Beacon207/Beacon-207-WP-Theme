@@ -27,7 +27,7 @@
             <div class="inner-main">
                 <div class="inner-head">
                     <h2>Browse Projects</h2>
-                    <hr/>
+                    <!--<hr/>-->
                     <p>Click to view entire body of work</p>
                 </div> 
 
