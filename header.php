@@ -6,14 +6,11 @@
 
         <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico" />
 
-		<!-- LOAD CSS -->
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/normalize.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 		
-		
-		<!-- PAGE META TITLE / DESCRIPTION -->
-		<title><?php echo get_bloginfo('name'); ?> | <?php echo get_the_title(); ?></title>
+       <!-- GOOGLE FONTS -->
+       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+       
+        
 		<meta name="description" content="Welcome to Beacon Media..." />
 		
 		<?php wp_head(); ?>
